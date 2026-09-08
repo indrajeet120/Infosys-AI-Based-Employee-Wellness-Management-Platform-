@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Environments
+venv/
+env/
+.env
+
+# Large model weight files (downloaded/trained locally)
+models/bert_emotion/*.safetensors
+models/bert_emotion/*.bin
+models/distilbert_emotion/*.safetensors
+models/distilbert_emotion/*.bin
+
+# Logs & temp
+*.log
+.DS_Store
