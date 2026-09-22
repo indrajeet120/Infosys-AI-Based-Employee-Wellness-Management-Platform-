@@ -2,56 +2,56 @@
   "benchmark_name": "ISEAR Held-Out Subset",
   "model_evaluated": "BERT",
   "total_samples": 23,
-  "correct_predictions_count": 13,
-  "incorrect_predictions_count": 10,
-  "sample_accuracy": 0.5652,
-  "hamming_accuracy": 0.8116,
-  "macro_precision": 0.5545,
-  "macro_recall": 0.8194,
-  "macro_f1": 0.6167,
+  "correct_predictions_count": 11,
+  "incorrect_predictions_count": 12,
+  "sample_accuracy": 0.4783,
+  "hamming_accuracy": 0.8623,
+  "macro_precision": 0.4556,
+  "macro_recall": 0.4583,
+  "macro_f1": 0.437,
   "emotion_wise_performance": {
     "Joy": {
-      "accuracy": 0.8261,
-      "precision": 0.5,
-      "recall": 1.0,
-      "f1": 0.6667,
-      "support": 4
-    },
-    "Sadness": {
-      "accuracy": 0.6957,
-      "precision": 0.3636,
-      "recall": 1.0,
-      "f1": 0.5333,
-      "support": 4
-    },
-    "Anger": {
-      "accuracy": 0.6957,
-      "precision": 0.3636,
-      "recall": 1.0,
-      "f1": 0.5333,
-      "support": 4
-    },
-    "Fear": {
       "accuracy": 0.8696,
       "precision": 0.6,
       "recall": 0.75,
       "f1": 0.6667,
       "support": 4
     },
-    "Surprise": {
-      "accuracy": 0.9565,
+    "Sadness": {
+      "accuracy": 0.913,
       "precision": 1.0,
-      "recall": 0.6667,
-      "f1": 0.8,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "support": 4
+    },
+    "Anger": {
+      "accuracy": 0.7391,
+      "precision": 0.3333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Fear": {
+      "accuracy": 0.9565,
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "support": 4
+    },
+    "Surprise": {
+      "accuracy": 0.8696,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
       "support": 3
     },
     "Disgust": {
       "accuracy": 0.8261,
-      "precision": 0.5,
-      "recall": 0.5,
-      "f1": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
       "support": 4
     }
   },
-  "incorrect_samples_count": 10
+  "incorrect_samples_count": 12
 }

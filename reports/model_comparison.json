@@ -1,61 +1,61 @@
 {
   "comparison_metric": "Macro F1-Score",
-  "better_performing_model": "DistilBERT",
+  "better_performing_model": "BERT",
   "metrics_summary": {
     "Accuracy": {
-      "BERT": 0.9,
-      "DistilBERT": 0.9
+      "BERT": 0.85,
+      "DistilBERT": 0.85
     },
     "Precision": {
       "BERT": 0.75,
-      "DistilBERT": 0.7778
+      "DistilBERT": 0.5833
     },
     "Recall": {
-      "BERT": 0.9444,
-      "DistilBERT": 1.0
+      "BERT": 0.4167,
+      "DistilBERT": 0.3889
     },
     "Macro F1": {
-      "BERT": 0.8111,
-      "DistilBERT": 0.8536
+      "BERT": 0.5222,
+      "DistilBERT": 0.4611
     },
     "Exact Match Ratio": {
-      "BERT": 0.5,
-      "DistilBERT": 0.5
+      "BERT": 0.4,
+      "DistilBERT": 0.4
     }
   },
   "bert_details": {
     "model": "BERT",
     "total_test_samples": 10,
     "threshold": 0.5,
-    "exact_match_accuracy": 0.5,
-    "hamming_accuracy": 0.9,
-    "accuracy": 0.9,
+    "exact_match_accuracy": 0.4,
+    "hamming_accuracy": 0.85,
+    "accuracy": 0.85,
     "precision": 0.75,
-    "recall": 0.9444,
-    "macro_f1": 0.8111,
-    "micro_precision": 0.7222,
-    "micro_recall": 0.9286,
-    "micro_f1": 0.8125,
+    "recall": 0.4167,
+    "macro_f1": 0.5222,
+    "micro_precision": 0.8571,
+    "micro_recall": 0.4286,
+    "micro_f1": 0.5714,
     "emotion_metrics": {
       "Joy": {
-        "accuracy": 1.0,
+        "accuracy": 0.8,
         "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
+        "recall": 0.3333,
+        "f1": 0.5,
         "support": 3
       },
       "Sadness": {
         "accuracy": 0.8,
         "precision": 0.5,
-        "recall": 1.0,
-        "f1": 0.6667,
+        "recall": 0.5,
+        "f1": 0.5,
         "support": 2
       },
       "Anger": {
         "accuracy": 0.9,
-        "precision": 0.6667,
-        "recall": 1.0,
-        "f1": 0.8,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
         "support": 2
       },
       "Fear": {
@@ -67,16 +67,16 @@
       },
       "Surprise": {
         "accuracy": 0.9,
-        "precision": 0.6667,
-        "recall": 1.0,
-        "f1": 0.8,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
         "support": 2
       },
       "Disgust": {
-        "accuracy": 0.9,
-        "precision": 0.6667,
-        "recall": 1.0,
-        "f1": 0.8,
+        "accuracy": 0.8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
         "support": 2
       }
     }
@@ -85,56 +85,56 @@
     "model": "DISTILBERT",
     "total_test_samples": 10,
     "threshold": 0.5,
-    "exact_match_accuracy": 0.5,
-    "hamming_accuracy": 0.9,
-    "accuracy": 0.9,
-    "precision": 0.7778,
-    "recall": 1.0,
-    "macro_f1": 0.8536,
-    "micro_precision": 0.7,
-    "micro_recall": 1.0,
-    "micro_f1": 0.8235,
+    "exact_match_accuracy": 0.4,
+    "hamming_accuracy": 0.85,
+    "accuracy": 0.85,
+    "precision": 0.5833,
+    "recall": 0.3889,
+    "macro_f1": 0.4611,
+    "micro_precision": 0.8571,
+    "micro_recall": 0.4286,
+    "micro_f1": 0.5714,
     "emotion_metrics": {
       "Joy": {
-        "accuracy": 1.0,
+        "accuracy": 0.9,
         "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
         "support": 3
       },
       "Sadness": {
-        "accuracy": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
+        "accuracy": 0.8,
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
         "support": 2
       },
       "Anger": {
-        "accuracy": 1.0,
+        "accuracy": 0.9,
         "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667,
         "support": 2
       },
       "Fear": {
-        "accuracy": 0.8,
-        "precision": 0.6,
-        "recall": 1.0,
-        "f1": 0.75,
+        "accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
         "support": 3
       },
       "Surprise": {
-        "accuracy": 0.7,
-        "precision": 0.4,
-        "recall": 1.0,
-        "f1": 0.5714,
+        "accuracy": 0.8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
         "support": 2
       },
       "Disgust": {
-        "accuracy": 0.9,
-        "precision": 0.6667,
-        "recall": 1.0,
-        "f1": 0.8,
+        "accuracy": 0.8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
         "support": 2
       }
     }

@@ -1,102 +1,157 @@
-# Text Sentiment Analysis & Deep Emotion Classification System
+# AI Employee Wellness & Emotion Management Platform
 
-An end-to-end NLP and Deep Learning classification system integrating **Milestone 1 (Ingestion, Preprocessing & VADER Sentiment Baseline)** and **Milestone 2 (BERT & DistilBERT 6-Emotion Multi-Label Classification)** with comprehensive evaluation, ISEAR benchmark validation, and an interactive Streamlit UI.
-
----
-
-## 🌟 Milestone 1 & 2 Key Features
-
-1. **Multi-Channel Text Ingestion & Validation (Milestone 1)**
-   - **Direct Text Input**, **TXT File Upload**, and **CSV Upload** (with `text` column).
-   - Strict validation preventing empty strings, whitespace, corrupt headers, and invalid formats.
-
-2. **Sentiment-Aware NLP Preprocessing (Milestone 1)**
-   - Sanitization of URLs, HTML tags, mentions, and hashtags.
-   - Contraction expansion (`can't` → `can not`, `won't` → `will not`).
-   - **Negation Preservation**: Retains critical sentiment modifiers (`not`, `no`, `never`, `cannot`, etc.).
-   - **WordNet Lemmatization**: Accurate POS-tagged base word normalization.
-
-3. **VADER Baseline Sentiment Engine (Milestone 1)**
-   - Granular scores: `pos`, `neg`, `neu`, and `compound`.
-   - Dynamic classification thresholds: $\text{Compound} \ge 0.05$ (Positive), $\le -0.05$ (Negative), otherwise Neutral.
-
-4. **Multi-Label Deep Emotion Classification (Milestone 2)**
-   - **6 Core Ekman Emotion Categories**:
-     1. Joy
-     2. Sadness
-     3. Anger
-     4. Fear
-     5. Surprise
-     6. Disgust
-   - **Transformer Architectures**: Pre-trained & fine-tuned `BERT` (`bert-base-uncased`) and `DistilBERT` (`distilbert-base-uncased`).
-   - **True Multi-Label Probabilities**: Multi-label Sigmoid activations with pos-weighted `BCEWithLogitsLoss`.
-   - **Configurable Confidence Thresholding**: Default $0.50$ (customizable $0.10 - 0.90$).
-   - **Primary Emotion**: Highest-probability emotion dynamically identified.
-
-5. **Model Evaluation & Comparative Analysis (Milestone 2)**
-   - Multi-label evaluation: Subset Accuracy, Hamming Accuracy, Macro/Micro Precision, Recall, and Macro F1-Score via `scikit-learn`.
-   - Side-by-side comparison report generated in `reports/model_comparison.json`.
-
-6. **Held-Out ISEAR Benchmark Validation (Milestone 2)**
-   - Validation against an independent, held-out subset of the International Survey on Emotion Antecedents and Reactions (ISEAR).
-   - Generates emotion-wise metrics, accuracy, and error analyses saved to `reports/isear_results.csv` and `reports/isear_metrics.json`.
-
-7. **Interactive Streamlit Web Dashboard**
-   - Live text input, file uploaders, model selector (`BERT` / `DistilBERT`), threshold slider, progress bars for all 6 emotions, single-sample inspector, tabular reports, and benchmark report viewers.
+An end-to-end NLP, Deep Learning, and Personalized Recommendation Platform integrating:
+* **Milestone 1:** Multi-Channel Ingestion, Negation-Preserving Preprocessing & VADER Sentiment Baseline.
+* **Milestone 2:** Fine-Tuned BERT & DistilBERT 6-Emotion Multi-Label Classification (`Joy`, `Sadness`, `Anger`, `Fear`, `Surprise`, `Disgust`) and ISEAR Benchmark Validation.
+* **Milestone 3:** Advanced Emotion Intensity & State Analysis, SentenceTransformer Dense Semantic Matching, and Hybrid Personalized Wellness Recommendation Engine with Interactive Feedback Learning.
 
 ---
 
-## 📁 Project Architecture
+> ⚠️ **Medical Disclaimer:**  
+> *This system estimates emotional states from text and recommends wellness content. It is not a medical diagnostic or clinical assessment system.*
+
+---
+
+## 🌟 Comprehensive Architecture Diagram
+
+```text
+                                [User Text / Review / Feedback]
+                                                ↓
+                            [Ingestion & Strict Input Validation]
+                                                ↓
+            ┌───────────────────────────────────┴───────────────────────────────────┐
+            ↓                                                                       ↓
+[NLP Preprocessing Layer]                                              [Preserved Raw Text]
+• URL, HTML & Noise Cleaning                                           • WordPiece Tokenization
+• Contraction Expansion                                                • Sequence Padding/Truncation
+• Negation Preservation ("not happy" → "not happy")                                 ↓
+• WordNet Lemmatization                                                [Fine-Tuned BERT / DistilBERT]
+            ↓                                                          • Multi-Label Sigmoid Head
+[VADER Baseline Sentiment]                                             • 6 Independent Probabilities
+• Pos / Neg / Neu / Compound Polarity                                               ↓
+            └───────────────────────────────────┬───────────────────────────────────┘
+                                                ↓
+                           [Emotion Intensity & State Engine]
+                           • Dominant Emotion & Confidence
+                           • Dynamic Intensity Score (0.0 to 1.0)
+                           • Positive vs Negative Polarity Contrast
+                           • Mixed Emotion Detection
+                           • Severity Tiers (Low, Moderate, High, Very High)
+                           • Final Descriptive Emotional State
+                                                ↓
+       ┌────────────────────────────────────────┴────────────────────────────────────────┐
+       │                          HYBRID RECOMMENDATION ENGINE                           │
+       │                                                                                 │
+       │   1. Rule-Based Calibrator: Maps intensity to grounding vs reflective tools    │
+       │   2. Content-Based Filter: Matches activity types, tags, and difficulties       │
+       │   3. User Preference Matcher: Incorporates preferred content types & language   │
+       │   4. Emotion Similarity: Computes overlap with detected emotion distribution    │
+       │   5. Semantic Dense Matcher: SentenceTransformer (all-MiniLM-L6-v2) Cosine Sim │
+       │   6. Historical Behavior: Boosts liked tags, penalizes disliked content         │
+       │                                                                                 │
+       │   Dynamic Multi-Factor Ranking Formula:                                         │
+       │   Final Score = w_emo*S_emo + w_int*S_int + w_pref*S_pref + w_sim*S_sim         │
+       │               + w_hist*S_hist + w_nov*S_nov - Dup_Penalty - LowRel_Penalty      │
+       └────────────────────────────────────────┬────────────────────────────────────────┘
+                                                ↓
+                               [Tailored Wellness Activities]
+                               • Ranked Recommendations with Scores
+                               • Explainable Breakdown & Strategies
+                               • Interactive Feedback Loop (Like / Dislike / Select)
+```
+
+---
+
+## 📐 Formulas, Schemas & Specifications
+
+### 1. Dynamic Emotional Intensity Formula (Task 1)
+$$\text{Intensity} = \text{clamp}\left(0.45 \cdot P_{\text{dom}} + 0.25 \cdot \max(P_{\text{pos}}, P_{\text{neg}}) + 0.20 \cdot W_{\text{sev}}(E_{\text{dom}}) + 0.10 \cdot (1 - \bar{H}), 0.0, 1.0\right)$$
+* $P_{\text{dom}}$: Dominant emotion confidence score.
+* $P_{\text{pos}}, P_{\text{neg}}$: Positive and negative aggregate polarities.
+* $W_{\text{sev}}$: Emotion severity category weight (Anger/Fear: 0.85, Sadness: 0.80, Disgust: 0.75, Surprise: 0.70, Joy: 0.65).
+* $\bar{H}$: Normalized Shannon entropy of the probability distribution.
+
+### 2. Severity Classification Tiers
+* **Low:** $\text{Intensity} < 0.35$
+* **Moderate:** $0.35 \le \text{Intensity} < 0.65$
+* **High:** $0.65 \le \text{Intensity} < 0.85$
+* **Very High:** $\text{Intensity} \ge 0.85$
+
+### 3. Dynamic Multi-Factor Ranking Formula (Task 4)
+$$\begin{aligned}
+\text{Final Score} = & \; 0.30 \times \text{Emotion Relevance} \\
+& + 0.15 \times \text{Intensity Fit} \\
+& + 0.20 \times \text{User Preference Match} \\
+& + 0.20 \times \text{Semantic Cosine Similarity} \\
+& + 0.10 \times \text{Historical Preference Score} \\
+& + 0.05 \times \text{Novelty Score} \\
+& - \text{Duplicate Penalty} - \text{Low Relevance Penalty}
+\end{aligned}$$
+
+---
+
+## 📁 Repository Structure
 
 ```text
 sentiment_emotion_project/
 │
-├── app.py                     # Streamlit web dashboard
-├── requirements.txt           # Project dependencies
-├── README.md                  # Project documentation & guide
-├── verify_milestone1.py       # Milestone 1 CLI verification runner
-├── verify_milestone2.py       # Milestone 2 CLI verification runner
+├── app.py                     # Unified Streamlit Web Dashboard (Milestones 1, 2, 3)
+├── app_milestone1.py          # Dedicated Milestone 1 App (Ingestion & VADER)
+├── app_milestone2.py          # Dedicated Milestone 2 App (BERT/DistilBERT Emotion)
+├── app_milestone3.py          # Dedicated Milestone 3 App (Wellness Recommendations)
+│
+├── verify_milestone1.py       # Milestone 1 CLI Runner
+├── verify_milestone2.py       # Milestone 2 CLI Runner
+├── verify_milestone3.py       # Milestone 3 CLI Runner
+│
+├── MILESTONE_1_GUIDE.md       # Detailed Milestone 1 Guide
+├── MILESTONE_2_GUIDE.md       # Detailed Milestone 2 Guide
+├── MILESTONE_3_GUIDE.md       # Detailed Milestone 3 Guide
+├── README.md                  # Unified Project Documentation
+├── requirements.txt           # Dependencies
 │
 ├── services/
-│   ├── __init__.py
-│   ├── config.py              # Centralized constants, paths, labels, device setup
+│   ├── config.py              # Central configurations, constants, paths & weights
 │   ├── ingestion.py           # Multi-channel text ingestion & strict validation
-│   ├── preprocessing.py       # Text cleaning, tokenization, lemmatization & negation handling
+│   ├── preprocessing.py       # Negation-preserving NLP cleaning & lemmatization
 │   ├── sentiment.py           # VADER baseline sentiment analyzer
-│   ├── dataset_loader.py      # Multi-label PyTorch Dataset & CSV parsers
-│   ├── model_training.py      # Fine-tuning engine for BERT and DistilBERT
-│   ├── emotion.py             # Transformer inference engine & confidence scoring
-│   ├── evaluation.py          # Multi-label scikit-learn evaluation & comparison
+│   ├── dataset_loader.py      # PyTorch multi-label dataset & label normalizer
+│   ├── model_training.py      # Pos-weighted BCE fine-tuning engine (BERT / DistilBERT)
+│   ├── emotion.py             # Multi-label sigmoid inference engine
+│   ├── evaluation.py          # Scikit-learn multi-label comparative evaluation
 │   ├── isear_validation.py    # Held-out ISEAR benchmark evaluation runner
-│   └── reporting.py           # Integrated Milestone 1 + 2 report generator
+│   ├── intensity.py           # Task 1: Emotional intensity & state analyzer
+│   ├── wellness_data.py       # Task 2: Wellness repository and dataset loader
+│   ├── user_profile.py        # Task 2: User profile, preferences & feedback loop
+│   ├── semantic_matcher.py    # Task 5: SentenceTransformer dense cosine matcher
+│   ├── hybrid_recommender.py  # Task 3 & 4: Hybrid candidate generation & dynamic ranking
+│   └── reporting.py           # Unified tabular reporting
 │
 ├── scripts/
 │   ├── prepare_datasets.py    # Dataset creation & ISEAR benchmark preparation
 │   ├── train_bert.py          # Standalone BERT training script
 │   ├── train_distilbert.py    # Standalone DistilBERT training script
 │   ├── evaluate_models.py     # Standalone model evaluation & comparison script
-│   └── validate_isear.py      # Standalone ISEAR benchmark validation script
-│
-├── models/
-│   ├── bert_emotion/          # Saved fine-tuned BERT model and tokenizer
-│   └── distilbert_emotion/    # Saved fine-tuned DistilBERT model and tokenizer
+│   ├── validate_isear.py      # Standalone ISEAR benchmark validation script
+│   └── generate_embeddings.py # Precomputes and caches wellness dense embeddings
 │
 ├── data/
 │   ├── sample_corpus.csv      # Milestone 1 benchmark corpus
 │   ├── train_emotions.csv     # 6-emotion multi-label training set
 │   ├── val_emotions.csv       # 6-emotion validation set
 │   ├── test_emotions.csv      # 6-emotion test set
-│   └── isear_benchmark.csv    # Held-out ISEAR benchmark dataset
+│   ├── isear_benchmark.csv    # Held-out ISEAR benchmark dataset
+│   ├── wellness_content.csv   # Curated wellness activities dataset
+│   ├── user_profiles.json     # User profile and preference storage
+│   └── interaction_history.json # Timestamped interaction & feedback storage
 │
-├── reports/
-│   ├── bert_metrics.json      # BERT test evaluation metrics
-│   ├── distilbert_metrics.json# DistilBERT test evaluation metrics
-│   ├── model_comparison.json  # Side-by-side BERT vs DistilBERT comparison
-│   ├── isear_metrics.json     # ISEAR benchmark validation metrics
-│   └── isear_results.csv      # Sample-by-sample ISEAR predictions and error report
+├── models/
+│   ├── bert_emotion/          # Fine-tuned BERT model and tokenizer
+│   ├── distilbert_emotion/    # Fine-tuned DistilBERT model and tokenizer
+│   ├── wellness_embeddings.npy# Cached precomputed dense embeddings matrix
+│   └── wellness_embeddings_meta.json # Embeddings metadata
 │
 └── tests/
-    ├── __init__.py
     ├── test_ingestion.py      # 17 ingestion unit tests
     ├── test_preprocessing.py  # 11 preprocessing unit tests
     ├── test_sentiment.py      # 6 VADER sentiment unit tests
@@ -104,7 +159,12 @@ sentiment_emotion_project/
     ├── test_emotion.py        # 10 Transformer emotion unit tests
     ├── test_evaluation.py     # 3 model evaluation unit tests
     ├── test_isear.py          # 2 ISEAR benchmark unit tests
-    └── test_integration_milestone2.py # 4 Milestone 2 end-to-end integration tests
+    ├── test_integration_milestone2.py # 4 Milestone 2 integration tests
+    ├── test_intensity.py      # 8 emotion intensity unit tests (Task 1)
+    ├── test_user_profile.py   # 6 user profile & feedback unit tests (Task 2)
+    ├── test_semantic.py       # 4 semantic embedding unit tests (Task 5)
+    ├── test_hybrid_recommender.py # 5 hybrid ranking unit tests (Task 3 & 4)
+    └── test_integration_milestone3.py # 3 Milestone 3 integration tests
 ```
 
 ---
@@ -121,44 +181,43 @@ pip install -r requirements.txt --trusted-host pypi.org --trusted-host files.pyt
 python download_nltk.py
 ```
 
----
-
-## 🏋️ Training & Validation Commands
-
-### Train DistilBERT:
+### 3. Generate Semantic Embeddings Cache
 ```bash
-python scripts/train_distilbert.py
-```
-
-### Train BERT:
-```bash
-python scripts/train_bert.py
-```
-
-### Evaluate & Compare Models:
-```bash
-python scripts/evaluate_models.py
-```
-
-### Validate on Held-Out ISEAR Benchmark:
-```bash
-python scripts/validate_isear.py
+python scripts/generate_embeddings.py
 ```
 
 ---
 
 ## 🧪 Running Automated Tests
 
-Run the complete 59-test suite:
+Run the complete 85-test suite across all three milestones:
 ```bash
-pytest -v
+pytest -q
 ```
+**Test Results:** `85 passed (100% Pass Rate)`
 
 ---
 
-## 💻 Running the Streamlit Application
+## 💻 Running the Streamlit Applications
 
 ```bash
+# 1. Run Unified Platform (Milestones 1, 2, and 3):
 streamlit run app.py
+
+# 2. Run Dedicated Milestone 1 App:
+streamlit run app_milestone1.py
+
+# 3. Run Dedicated Milestone 2 App:
+streamlit run app_milestone2.py
+
+# 4. Run Dedicated Milestone 3 App:
+streamlit run app_milestone3.py
 ```
-Open `http://localhost:8501` in your web browser.
+Open `http://localhost:8501` in your browser.
+
+---
+
+## 🔒 Privacy, Safety & Ethical Limitations
+1. **No Medical Claims:** This platform is designed solely for self-care, reflection, and workplace wellness. It does not diagnose, treat, or assess psychiatric conditions.
+2. **Data Minimization:** No personally identifiable information (PII) or sensitive health records are stored. Profiles track only interaction counters, liked tags, and emotional trend history.
+3. **Transparent Fallbacks:** When insufficient interaction matrices exist for Collaborative Filtering, the system explicitly reports status and activates content/semantic fallbacks without generating mock data.

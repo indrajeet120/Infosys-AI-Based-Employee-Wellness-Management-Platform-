@@ -1,24 +1,24 @@
 Sample_ID,Text,Expected_Emotion,Primary_Predicted,Predicted_Emotions,Primary_Confidence,Is_Correct,Exact_Match
-1,When I passed my final university examinations with high honors.,Joy,Joy,Joy,0.7022,Correct,Yes
-2,When my partner proposed to me during our vacation in Paris.,Joy,Joy,Joy,0.629,Correct,Yes
-3,When I was reunited with my family after three years of separation.,Joy,Joy,"Joy, Sadness",0.7069,Correct,No
-4,When our team won the annual regional football tournament.,Joy,Joy,Joy,0.6627,Correct,Yes
-5,When my grandfather passed away after a prolonged illness.,Sadness,Sadness,Sadness,0.624,Correct,Yes
-6,When I realized that my long-term relationship was definitively over.,Sadness,Sadness,"Sadness, Joy",0.6763,Correct,No
-7,When I was diagnosed with a chronic health condition.,Sadness,Sadness,"Sadness, Anger",0.6401,Correct,No
-8,When I had to say farewell to all my childhood friends before emigrating.,Sadness,Joy,"Joy, Sadness",0.6823,Incorrect,No
-9,When someone falsely accused me of stealing money from the office.,Anger,Anger,Anger,0.7441,Correct,Yes
-10,When a colleague took total credit for the project I completed single-handedly.,Anger,Joy,"Joy, Anger",0.6067,Incorrect,No
-11,When my bicycle was stolen from outside my apartment building.,Anger,Anger,"Anger, Sadness",0.6848,Correct,No
-12,When an aggressive customer insulted my staff without any justification.,Anger,Anger,Anger,0.769,Correct,Yes
-13,When I was driving on an icy highway and the vehicle suddenly spun out of control.,Fear,Sadness,"Sadness, Fear, Anger",0.5498,Incorrect,No
-14,When I had to undergo an emergency medical operation under general anesthesia.,Fear,Sadness,"Sadness, Anger, Fear",0.5769,Incorrect,No
-15,When I got lost in a dense forest as darkness fell rapidly.,Fear,Fear,"Fear, Sadness, Disgust",0.5616,Correct,No
-16,When an armed robbery occurred at the convenience store while I was shopping.,Fear,Anger,Anger,0.6775,Incorrect,No
-17,When I found a dead insect inside my soup at an expensive restaurant.,Disgust,Anger,"Anger, Fear",0.5331,Incorrect,No
-18,When I witnessed someone spit directly on a public bus seat.,Disgust,Anger,Anger,0.6721,Incorrect,No
-19,When I smelled the overwhelming odor of rotting garbage on a hot summer day.,Disgust,Disgust,Disgust,0.5313,Correct,Yes
-20,When I saw an individual mistreat a defenseless stray animal on the street.,Disgust,Anger,"Anger, Disgust",0.6705,Incorrect,No
-21,When I opened the front door to find all my distant relatives standing there.,Surprise,Surprise,"Surprise, Disgust",0.5321,Correct,No
-22,When an unexpected inheritance from a distant great-uncle was announced.,Surprise,Joy,"Joy, Sadness, Surprise",0.7315,Incorrect,No
-23,When the weather suddenly changed from clear blue sky to an abrupt thunderstorm.,Surprise,Sadness,"Sadness, Fear",0.5611,Incorrect,No
+1,When I passed my final university examinations with high honors.,Joy,Joy,Joy,0.9683,Correct,Yes
+2,When my partner proposed to me during our vacation in Paris.,Joy,Anger,Anger,0.5459,Incorrect,No
+3,When I was reunited with my family after three years of separation.,Joy,Joy,Joy,0.944,Correct,Yes
+4,When our team won the annual regional football tournament.,Joy,Joy,Joy,0.9212,Correct,Yes
+5,When my grandfather passed away after a prolonged illness.,Sadness,Sadness,Sadness,0.9459,Correct,Yes
+6,When I realized that my long-term relationship was definitively over.,Sadness,Joy,Joy,0.5068,Incorrect,No
+7,When I was diagnosed with a chronic health condition.,Sadness,Fear,Fear,0.2912,Incorrect,No
+8,When I had to say farewell to all my childhood friends before emigrating.,Sadness,Sadness,Sadness,0.9665,Correct,Yes
+9,When someone falsely accused me of stealing money from the office.,Anger,Anger,Anger,0.9386,Correct,Yes
+10,When a colleague took total credit for the project I completed single-handedly.,Anger,Joy,Joy,0.9629,Incorrect,No
+11,When my bicycle was stolen from outside my apartment building.,Anger,Fear,Fear,0.4719,Incorrect,No
+12,When an aggressive customer insulted my staff without any justification.,Anger,Anger,Anger,0.9841,Correct,Yes
+13,When I was driving on an icy highway and the vehicle suddenly spun out of control.,Fear,Fear,Fear,0.8784,Correct,Yes
+14,When I had to undergo an emergency medical operation under general anesthesia.,Fear,Fear,Fear,0.6788,Correct,Yes
+15,When I got lost in a dense forest as darkness fell rapidly.,Fear,Fear,Fear,0.9117,Correct,Yes
+16,When an armed robbery occurred at the convenience store while I was shopping.,Fear,Fear,Fear,0.6633,Correct,Yes
+17,When I found a dead insect inside my soup at an expensive restaurant.,Disgust,Fear,Fear,0.4149,Incorrect,No
+18,When I witnessed someone spit directly on a public bus seat.,Disgust,Anger,Anger,0.9657,Incorrect,No
+19,When I smelled the overwhelming odor of rotting garbage on a hot summer day.,Disgust,Anger,Anger,0.2148,Incorrect,No
+20,When I saw an individual mistreat a defenseless stray animal on the street.,Disgust,Fear,Fear,0.774,Incorrect,No
+21,When I opened the front door to find all my distant relatives standing there.,Surprise,Anger,Anger,0.509,Incorrect,No
+22,When an unexpected inheritance from a distant great-uncle was announced.,Surprise,Joy,Joy,0.4136,Incorrect,No
+23,When the weather suddenly changed from clear blue sky to an abrupt thunderstorm.,Surprise,Anger,Anger,0.7176,Incorrect,No

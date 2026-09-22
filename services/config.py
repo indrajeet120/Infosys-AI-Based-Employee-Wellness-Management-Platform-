@@ -93,16 +93,61 @@ MODEL_COMPARISON_PATH = REPORTS_DIR / "model_comparison.json"
 ISEAR_RESULTS_PATH = REPORTS_DIR / "isear_results.csv"
 ISEAR_METRICS_PATH = REPORTS_DIR / "isear_metrics.json"
 
-# Base model architectures
+# Milestone 3 - Wellness and Profile Paths
+WELLNESS_CONTENT_PATH = DATA_DIR / "wellness_content.csv"
+USER_PROFILES_PATH = DATA_DIR / "user_profiles.json"
+INTERACTION_HISTORY_PATH = DATA_DIR / "interaction_history.json"
+FEEDBACK_EVENTS_PATH = DATA_DIR / "feedback_events.json"
+WELLNESS_EMBEDDINGS_PATH = MODELS_DIR / "wellness_embeddings.npy"
+WELLNESS_EMBEDDINGS_META_PATH = MODELS_DIR / "wellness_embeddings_meta.json"
+
+# Base model architectures & embeddings
 BERT_BASE_MODEL = "bert-base-uncased"
 DISTILBERT_BASE_MODEL = "distilbert-base-uncased"
+EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
 
 # Default hyper-parameters & settings
 DEFAULT_THRESHOLD = 0.50
+DEFAULT_MIXED_THRESHOLD = 0.30
 MAX_SEQ_LENGTH = 128
 DEFAULT_BATCH_SIZE = 16
 DEFAULT_LEARNING_RATE = 5e-5
 DEFAULT_EPOCHS = 4
+
+# Severity levels & thresholds
+SEVERITY_THRESHOLDS = {
+    "Low": 0.35,
+    "Moderate": 0.65,
+    "High": 0.85,
+}
+
+# Emotion category severity base weights for intensity formula
+EMOTION_SEVERITY_WEIGHTS = {
+    "anger": 0.85,
+    "fear": 0.85,
+    "sadness": 0.80,
+    "disgust": 0.75,
+    "surprise": 0.70,
+    "joy": 0.65,
+}
+
+# Ranking Weights (Sum of positive components = 1.0)
+DEFAULT_RANKING_WEIGHTS = {
+    "emotion_weight": 0.30,
+    "intensity_weight": 0.15,
+    "preference_weight": 0.20,
+    "similarity_weight": 0.20,
+    "history_weight": 0.10,
+    "novelty_weight": 0.05,
+    "duplicate_penalty": 0.20,
+    "low_relevance_penalty": 0.30,
+}
+
+# Medical Disclaimer
+MEDICAL_DISCLAIMER = (
+    "⚠️ Medical Disclaimer: This system estimates emotional states from text and recommends "
+    "wellness content. It is not a medical diagnostic or clinical assessment system."
+)
 
 
 def get_device() -> torch.device:
@@ -110,3 +155,4 @@ def get_device() -> torch.device:
     if torch.cuda.is_available():
         return torch.device("cuda")
     return torch.device("cpu")
+

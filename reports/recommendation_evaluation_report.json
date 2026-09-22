@@ -1,0 +1,470 @@
+{
+  "evaluation_configuration": {
+    "k": 3,
+    "num_test_users": 15,
+    "candidate_pool_size": 24,
+    "timestamp": "2026-09-22T23:18:20.648283",
+    "active_advanced_signals": [
+      "emotion_relevance",
+      "emotion_intensity_fit",
+      "user_preference_matching",
+      "historical_behavior_and_synergy",
+      "semantic_text_embeddings",
+      "feedback_learning_signals",
+      "dynamic_diversity_reranking"
+    ]
+  },
+  "metric_definitions": {
+    "Precision@K": "Fraction of top-K recommendations present in ground-truth relevant set.",
+    "Recall@K": "Fraction of total ground-truth relevant set retrieved in top-K.",
+    "F1-Score@K": "Harmonic mean of Precision@K and Recall@K.",
+    "NDCG@K": "Normalized Discounted Cumulative Gain at K (ranking quality metric).",
+    "Ground-Truth Acceptance Proxy": "Offline relevance proxy estimating expected user acceptance.",
+    "Diversity": "Intra-List Diversity ratio of unique activity types in top-K list.",
+    "Latency": "Recommendation generation latency in milliseconds (Mean & P95)."
+  },
+  "baseline_metrics": {
+    "precision_at_k": 0.6667,
+    "recall_at_k": 0.6444,
+    "f1_score_at_k": 0.6482,
+    "ndcg_at_k": 0.6912,
+    "ground_truth_acceptance_proxy": 0.6667,
+    "diversity_score": 0.6889,
+    "mean_latency_ms": 0.02,
+    "p95_latency_ms": 0.02
+  },
+  "advanced_metrics": {
+    "precision_at_k": 0.7333,
+    "recall_at_k": 0.7111,
+    "f1_score_at_k": 0.7149,
+    "ndcg_at_k": 0.7884,
+    "ground_truth_acceptance_proxy": 0.7333,
+    "diversity_score": 0.6222,
+    "mean_latency_ms": 675.0,
+    "p95_latency_ms": 736.97
+  },
+  "improvement_pct": {
+    "precision_at_k": 9.99,
+    "recall_at_k": 10.35,
+    "f1_score_at_k": 10.29,
+    "ndcg_at_k": 14.06,
+    "ground_truth_acceptance_proxy": 9.99,
+    "diversity_score": -9.68,
+    "mean_latency_diff_ms": 674.98,
+    "p95_latency_diff_ms": 736.95
+  },
+  "per_user_results": [
+    {
+      "profile_id": "eval_01",
+      "user_id": "user_eval_01",
+      "dominant_emotion": "Fear",
+      "intensity": 0.85,
+      "baseline_ids": [
+        "well_001",
+        "well_002",
+        "well_011"
+      ],
+      "advanced_ids": [
+        "well_001",
+        "well_002",
+        "well_011"
+      ],
+      "ground_truth_ids": [
+        "well_011",
+        "well_001",
+        "well_002",
+        "well_018"
+      ],
+      "baseline_precision": 1.0,
+      "advanced_precision": 1.0,
+      "baseline_recall": 0.75,
+      "advanced_recall": 0.75,
+      "baseline_ndcg": 1.0,
+      "advanced_ndcg": 1.0
+    },
+    {
+      "profile_id": "eval_02",
+      "user_id": "user_eval_02",
+      "dominant_emotion": "Fear",
+      "intensity": 0.35,
+      "baseline_ids": [
+        "well_006",
+        "well_015",
+        "well_017"
+      ],
+      "advanced_ids": [
+        "well_022",
+        "well_017",
+        "well_015"
+      ],
+      "ground_truth_ids": [
+        "well_015",
+        "well_021",
+        "well_022"
+      ],
+      "baseline_precision": 0.3333,
+      "advanced_precision": 0.6667,
+      "baseline_recall": 0.3333,
+      "advanced_recall": 0.6667,
+      "baseline_ndcg": 0.2961,
+      "advanced_ndcg": 0.7039
+    },
+    {
+      "profile_id": "eval_03",
+      "user_id": "user_eval_03",
+      "dominant_emotion": "Anger",
+      "intensity": 0.8,
+      "baseline_ids": [
+        "well_009",
+        "well_001",
+        "well_007"
+      ],
+      "advanced_ids": [
+        "well_009",
+        "well_011",
+        "well_001"
+      ],
+      "ground_truth_ids": [
+        "well_004",
+        "well_009",
+        "well_001"
+      ],
+      "baseline_precision": 0.6667,
+      "advanced_precision": 0.6667,
+      "baseline_recall": 0.6667,
+      "advanced_recall": 0.6667,
+      "baseline_ndcg": 0.7654,
+      "advanced_ndcg": 0.7039
+    },
+    {
+      "profile_id": "eval_04",
+      "user_id": "user_eval_04",
+      "dominant_emotion": "Anger",
+      "intensity": 0.5,
+      "baseline_ids": [
+        "well_007",
+        "well_009",
+        "well_016"
+      ],
+      "advanced_ids": [
+        "well_009",
+        "well_016",
+        "well_024"
+      ],
+      "ground_truth_ids": [
+        "well_024",
+        "well_009",
+        "well_016"
+      ],
+      "baseline_precision": 0.6667,
+      "advanced_precision": 1.0,
+      "baseline_recall": 0.6667,
+      "advanced_recall": 1.0,
+      "baseline_ndcg": 0.5307,
+      "advanced_ndcg": 1.0
+    },
+    {
+      "profile_id": "eval_05",
+      "user_id": "user_eval_05",
+      "dominant_emotion": "Sadness",
+      "intensity": 0.75,
+      "baseline_ids": [
+        "well_002",
+        "well_007",
+        "well_019"
+      ],
+      "advanced_ids": [
+        "well_003",
+        "well_022",
+        "well_024"
+      ],
+      "ground_truth_ids": [
+        "well_010",
+        "well_017",
+        "well_003"
+      ],
+      "baseline_precision": 0.0,
+      "advanced_precision": 0.3333,
+      "baseline_recall": 0.0,
+      "advanced_recall": 0.3333,
+      "baseline_ndcg": 0.0,
+      "advanced_ndcg": 0.4693
+    },
+    {
+      "profile_id": "eval_06",
+      "user_id": "user_eval_06",
+      "dominant_emotion": "Sadness",
+      "intensity": 0.3,
+      "baseline_ids": [
+        "well_012",
+        "well_019",
+        "well_020"
+      ],
+      "advanced_ids": [
+        "well_019",
+        "well_020",
+        "well_012"
+      ],
+      "ground_truth_ids": [
+        "well_020",
+        "well_012",
+        "well_019",
+        "well_005"
+      ],
+      "baseline_precision": 1.0,
+      "advanced_precision": 1.0,
+      "baseline_recall": 0.75,
+      "advanced_recall": 0.75,
+      "baseline_ndcg": 1.0,
+      "advanced_ndcg": 1.0
+    },
+    {
+      "profile_id": "eval_07",
+      "user_id": "user_eval_07",
+      "dominant_emotion": "Joy",
+      "intensity": 0.85,
+      "baseline_ids": [
+        "well_005",
+        "well_019",
+        "well_013"
+      ],
+      "advanced_ids": [
+        "well_005",
+        "well_019",
+        "well_013"
+      ],
+      "ground_truth_ids": [
+        "well_014",
+        "well_013",
+        "well_019",
+        "well_005"
+      ],
+      "baseline_precision": 1.0,
+      "advanced_precision": 1.0,
+      "baseline_recall": 0.75,
+      "advanced_recall": 0.75,
+      "baseline_ndcg": 1.0,
+      "advanced_ndcg": 1.0
+    },
+    {
+      "profile_id": "eval_08",
+      "user_id": "user_eval_08",
+      "dominant_emotion": "Joy",
+      "intensity": 0.45,
+      "baseline_ids": [
+        "well_005",
+        "well_013",
+        "well_019"
+      ],
+      "advanced_ids": [
+        "well_013",
+        "well_005",
+        "well_019"
+      ],
+      "ground_truth_ids": [
+        "well_013",
+        "well_019",
+        "well_005"
+      ],
+      "baseline_precision": 1.0,
+      "advanced_precision": 1.0,
+      "baseline_recall": 1.0,
+      "advanced_recall": 1.0,
+      "baseline_ndcg": 1.0,
+      "advanced_ndcg": 1.0
+    },
+    {
+      "profile_id": "eval_09",
+      "user_id": "user_eval_09",
+      "dominant_emotion": "Disgust",
+      "intensity": 0.75,
+      "baseline_ids": [
+        "well_009",
+        "well_021",
+        "well_003"
+      ],
+      "advanced_ids": [
+        "well_009",
+        "well_021",
+        "well_003"
+      ],
+      "ground_truth_ids": [
+        "well_024",
+        "well_009",
+        "well_003"
+      ],
+      "baseline_precision": 0.6667,
+      "advanced_precision": 0.6667,
+      "baseline_recall": 0.6667,
+      "advanced_recall": 0.6667,
+      "baseline_ndcg": 0.7039,
+      "advanced_ndcg": 0.7039
+    },
+    {
+      "profile_id": "eval_10",
+      "user_id": "user_eval_10",
+      "dominant_emotion": "Disgust",
+      "intensity": 0.4,
+      "baseline_ids": [
+        "well_003",
+        "well_009",
+        "well_012"
+      ],
+      "advanced_ids": [
+        "well_009",
+        "well_003",
+        "well_024"
+      ],
+      "ground_truth_ids": [
+        "well_024",
+        "well_012"
+      ],
+      "baseline_precision": 0.3333,
+      "advanced_precision": 0.3333,
+      "baseline_recall": 0.5,
+      "advanced_recall": 0.5,
+      "baseline_ndcg": 0.3066,
+      "advanced_ndcg": 0.3066
+    },
+    {
+      "profile_id": "eval_11",
+      "user_id": "user_eval_11",
+      "dominant_emotion": "Surprise",
+      "intensity": 0.65,
+      "baseline_ids": [
+        "well_001",
+        "well_002",
+        "well_018"
+      ],
+      "advanced_ids": [
+        "well_002",
+        "well_001",
+        "well_018"
+      ],
+      "ground_truth_ids": [
+        "well_001",
+        "well_002",
+        "well_018"
+      ],
+      "baseline_precision": 1.0,
+      "advanced_precision": 1.0,
+      "baseline_recall": 1.0,
+      "advanced_recall": 1.0,
+      "baseline_ndcg": 1.0,
+      "advanced_ndcg": 1.0
+    },
+    {
+      "profile_id": "eval_12",
+      "user_id": "user_eval_12",
+      "dominant_emotion": "Surprise",
+      "intensity": 0.3,
+      "baseline_ids": [
+        "well_016",
+        "well_002",
+        "well_008"
+      ],
+      "advanced_ids": [
+        "well_016",
+        "well_014",
+        "well_002"
+      ],
+      "ground_truth_ids": [
+        "well_022",
+        "well_006",
+        "well_016"
+      ],
+      "baseline_precision": 0.3333,
+      "advanced_precision": 0.3333,
+      "baseline_recall": 0.3333,
+      "advanced_recall": 0.3333,
+      "baseline_ndcg": 0.4693,
+      "advanced_ndcg": 0.4693
+    },
+    {
+      "profile_id": "eval_13",
+      "user_id": "user_eval_13",
+      "dominant_emotion": "Fear",
+      "intensity": 0.7,
+      "baseline_ids": [
+        "well_001",
+        "well_011",
+        "well_018"
+      ],
+      "advanced_ids": [
+        "well_018",
+        "well_001",
+        "well_011"
+      ],
+      "ground_truth_ids": [
+        "well_011",
+        "well_001",
+        "well_018"
+      ],
+      "baseline_precision": 1.0,
+      "advanced_precision": 1.0,
+      "baseline_recall": 1.0,
+      "advanced_recall": 1.0,
+      "baseline_ndcg": 1.0,
+      "advanced_ndcg": 1.0
+    },
+    {
+      "profile_id": "eval_14",
+      "user_id": "user_eval_14",
+      "dominant_emotion": "Anger",
+      "intensity": 0.6,
+      "baseline_ids": [
+        "well_009",
+        "well_024",
+        "well_001"
+      ],
+      "advanced_ids": [
+        "well_009",
+        "well_024",
+        "well_016"
+      ],
+      "ground_truth_ids": [
+        "well_024",
+        "well_009"
+      ],
+      "baseline_precision": 0.6667,
+      "advanced_precision": 0.6667,
+      "baseline_recall": 1.0,
+      "advanced_recall": 1.0,
+      "baseline_ndcg": 1.0,
+      "advanced_ndcg": 1.0
+    },
+    {
+      "profile_id": "eval_15",
+      "user_id": "user_eval_15",
+      "dominant_emotion": "Fear",
+      "intensity": 0.55,
+      "baseline_ids": [
+        "well_015",
+        "well_017",
+        "well_021"
+      ],
+      "advanced_ids": [
+        "well_017",
+        "well_021",
+        "well_015"
+      ],
+      "ground_truth_ids": [
+        "well_010",
+        "well_017",
+        "well_006",
+        "well_019"
+      ],
+      "baseline_precision": 0.3333,
+      "advanced_precision": 0.3333,
+      "baseline_recall": 0.25,
+      "advanced_recall": 0.25,
+      "baseline_ndcg": 0.2961,
+      "advanced_ndcg": 0.4693
+    }
+  ],
+  "limitations": [
+    "Evaluation ground truth is based on annotated evaluation profiles, not live clinical trials.",
+    "Candidate pool size is 24 curated wellness activities.",
+    "Latency measurements reflect CPU execution without dedicated GPU hardware acceleration."
+  ]
+}
