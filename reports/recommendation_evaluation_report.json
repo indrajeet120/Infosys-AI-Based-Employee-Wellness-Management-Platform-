@@ -3,7 +3,7 @@
     "k": 3,
     "num_test_users": 15,
     "candidate_pool_size": 24,
-    "timestamp": "2026-09-22T23:18:20.648283",
+    "timestamp": "2026-09-24T22:42:47.016877",
     "active_advanced_signals": [
       "emotion_relevance",
       "emotion_intensity_fit",
@@ -30,8 +30,8 @@
     "ndcg_at_k": 0.6912,
     "ground_truth_acceptance_proxy": 0.6667,
     "diversity_score": 0.6889,
-    "mean_latency_ms": 0.02,
-    "p95_latency_ms": 0.02
+    "mean_latency_ms": 0.06,
+    "p95_latency_ms": 0.06
   },
   "advanced_metrics": {
     "precision_at_k": 0.7333,
@@ -40,8 +40,8 @@
     "ndcg_at_k": 0.7884,
     "ground_truth_acceptance_proxy": 0.7333,
     "diversity_score": 0.6222,
-    "mean_latency_ms": 675.0,
-    "p95_latency_ms": 736.97
+    "mean_latency_ms": 509.6,
+    "p95_latency_ms": 528.74
   },
   "improvement_pct": {
     "precision_at_k": 9.99,
@@ -50,8 +50,8 @@
     "ndcg_at_k": 14.06,
     "ground_truth_acceptance_proxy": 9.99,
     "diversity_score": -9.68,
-    "mean_latency_diff_ms": 674.98,
-    "p95_latency_diff_ms": 736.95
+    "mean_latency_diff_ms": 509.54,
+    "p95_latency_diff_ms": 528.68
   },
   "per_user_results": [
     {
@@ -70,10 +70,10 @@
         "well_011"
       ],
       "ground_truth_ids": [
-        "well_011",
         "well_001",
-        "well_002",
-        "well_018"
+        "well_011",
+        "well_018",
+        "well_002"
       ],
       "baseline_precision": 1.0,
       "advanced_precision": 1.0,
@@ -98,8 +98,8 @@
         "well_015"
       ],
       "ground_truth_ids": [
-        "well_015",
         "well_021",
+        "well_015",
         "well_022"
       ],
       "baseline_precision": 0.3333,
@@ -125,9 +125,9 @@
         "well_001"
       ],
       "ground_truth_ids": [
-        "well_004",
         "well_009",
-        "well_001"
+        "well_001",
+        "well_004"
       ],
       "baseline_precision": 0.6667,
       "advanced_precision": 0.6667,
@@ -152,8 +152,8 @@
         "well_024"
       ],
       "ground_truth_ids": [
-        "well_024",
         "well_009",
+        "well_024",
         "well_016"
       ],
       "baseline_precision": 0.6667,
@@ -179,8 +179,8 @@
         "well_024"
       ],
       "ground_truth_ids": [
-        "well_010",
         "well_017",
+        "well_010",
         "well_003"
       ],
       "baseline_precision": 0.0,
@@ -206,10 +206,10 @@
         "well_012"
       ],
       "ground_truth_ids": [
-        "well_020",
+        "well_005",
         "well_012",
-        "well_019",
-        "well_005"
+        "well_020",
+        "well_019"
       ],
       "baseline_precision": 1.0,
       "advanced_precision": 1.0,
@@ -234,10 +234,10 @@
         "well_013"
       ],
       "ground_truth_ids": [
-        "well_014",
+        "well_005",
         "well_013",
-        "well_019",
-        "well_005"
+        "well_014",
+        "well_019"
       ],
       "baseline_precision": 1.0,
       "advanced_precision": 1.0,
@@ -262,9 +262,9 @@
         "well_019"
       ],
       "ground_truth_ids": [
+        "well_005",
         "well_013",
-        "well_019",
-        "well_005"
+        "well_019"
       ],
       "baseline_precision": 1.0,
       "advanced_precision": 1.0,
@@ -289,9 +289,9 @@
         "well_003"
       ],
       "ground_truth_ids": [
-        "well_024",
         "well_009",
-        "well_003"
+        "well_003",
+        "well_024"
       ],
       "baseline_precision": 0.6667,
       "advanced_precision": 0.6667,
@@ -316,8 +316,8 @@
         "well_024"
       ],
       "ground_truth_ids": [
-        "well_024",
-        "well_012"
+        "well_012",
+        "well_024"
       ],
       "baseline_precision": 0.3333,
       "advanced_precision": 0.3333,
@@ -343,8 +343,8 @@
       ],
       "ground_truth_ids": [
         "well_001",
-        "well_002",
-        "well_018"
+        "well_018",
+        "well_002"
       ],
       "baseline_precision": 1.0,
       "advanced_precision": 1.0,
@@ -369,8 +369,8 @@
         "well_002"
       ],
       "ground_truth_ids": [
-        "well_022",
         "well_006",
+        "well_022",
         "well_016"
       ],
       "baseline_precision": 0.3333,
@@ -396,8 +396,8 @@
         "well_011"
       ],
       "ground_truth_ids": [
-        "well_011",
         "well_001",
+        "well_011",
         "well_018"
       ],
       "baseline_precision": 1.0,
@@ -423,8 +423,8 @@
         "well_016"
       ],
       "ground_truth_ids": [
-        "well_024",
-        "well_009"
+        "well_009",
+        "well_024"
       ],
       "baseline_precision": 0.6667,
       "advanced_precision": 0.6667,
@@ -449,9 +449,9 @@
         "well_015"
       ],
       "ground_truth_ids": [
-        "well_010",
-        "well_017",
         "well_006",
+        "well_017",
+        "well_010",
         "well_019"
       ],
       "baseline_precision": 0.3333,

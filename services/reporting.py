@@ -4,9 +4,10 @@ Generates comprehensive tabular reports and aggregated summary statistics combin
 Milestone 1 (VADER Sentiment) and Milestone 2 (Transformer Multi-label Emotion Analysis).
 """
 
+from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 import pandas as pd
-from services.config import EMOTIONS, EMOTION_DISPLAY_NAMES, DEFAULT_THRESHOLD
+from services.config import EMOTIONS, EMOTION_DISPLAY_NAMES, DEFAULT_THRESHOLD, MEDICAL_DISCLAIMER
 from services.emotion import analyze_emotion, get_emotion_classifier
 from services.ingestion import IngestedItem
 from services.preprocessing import preprocess_text
@@ -198,3 +199,157 @@ def calculate_summary_stats(items: List[IngestedItem]) -> Dict[str, Any]:
     """Convenience function returning only the summary statistics dictionary."""
     _, stats = process_pipeline_items(items)
     return stats
+
+
+def export_records_to_csv(
+    records: Any,
+    output_filepath: Optional[str] = None,
+) -> Any:
+    """Task 5: Exports a pandas DataFrame or list of dicts to CSV file path or bytes."""
+    if isinstance(records, pd.DataFrame):
+        df = records
+    elif isinstance(records, list):
+        df = pd.DataFrame(records)
+    elif isinstance(records, dict):
+        df = pd.DataFrame([records])
+    else:
+        df = pd.DataFrame()
+
+    if df.empty:
+        csv_bytes = b"Status\nNo records available for the selected range\n"
+    else:
+        csv_bytes = df.to_csv(index=False).encode("utf-8")
+
+    if output_filepath:
+        out_p = Path(output_filepath)
+        out_p.parent.mkdir(parents=True, exist_ok=True)
+        out_p.write_bytes(csv_bytes)
+        return str(output_filepath)
+    return csv_bytes
+
+
+def export_analytics_pdf(
+    report_title: str = "Employee Wellness & Emotion Analytics Summary Report",
+    user_id: str = "default_user",
+    date_range_str: str = "All Time",
+    summary_kpis: Optional[Dict[str, Any]] = None,
+    emotional_records: Optional[List[Dict[str, Any]]] = None,
+    recommendation_history: Optional[List[Dict[str, Any]]] = None,
+    output_filepath: Optional[str] = None,
+    analytics_summary: Optional[Dict[str, Any]] = None,
+    emotion_records: Optional[List[Dict[str, Any]]] = None,
+    recommendations: Optional[List[Dict[str, Any]]] = None,
+) -> Any:
+    """
+    Task 5: Generates a structured PDF report containing date ranges, emotional summary KPIs,
+    trend analysis, recommendation history, and disclaimer using ReportLab.
+    """
+    from io import BytesIO
+    from reportlab.lib.pagesizes import letter
+    from reportlab.lib import colors
+    from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+    from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+
+    kpis = summary_kpis or analytics_summary or {}
+    e_records = emotional_records or emotion_records or []
+    r_history = recommendation_history or recommendations or []
+
+    buffer = BytesIO()
+    doc = SimpleDocTemplate(buffer, pagesize=letter, rightMargin=36, leftMargin=36, topMargin=36, bottomMargin=36)
+    styles = getSampleStyleSheet()
+    story = []
+
+    # Title & Metadata
+    title_style = ParagraphStyle("TitleStyle", parent=styles["Heading1"], fontSize=18, textColor=colors.HexColor("#065F46"))
+    meta_style = ParagraphStyle("MetaStyle", parent=styles["Normal"], fontSize=10, textColor=colors.HexColor("#4B5563"))
+    disc_style = ParagraphStyle("DiscStyle", parent=styles["Normal"], fontSize=9, textColor=colors.HexColor("#92400E"), backColor=colors.HexColor("#FEF3C7"), borderPadding=6)
+
+    story.append(Paragraph(f"🌿 MoodMentor — {report_title}", title_style))
+    story.append(Spacer(1, 6))
+    story.append(Paragraph(f"<b>User ID:</b> {user_id} &nbsp;|&nbsp; <b>Date Range:</b> {date_range_str} &nbsp;|&nbsp; <b>Generated:</b> {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M')}", meta_style))
+    story.append(Spacer(1, 10))
+    story.append(Paragraph(f"<b>Medical Disclaimer:</b> {MEDICAL_DISCLAIMER}", disc_style))
+    story.append(Spacer(1, 14))
+
+    # Summary KPIs Table
+    story.append(Paragraph("<b>📊 Summary Analytics & Key Performance Indicators</b>", styles["Heading2"]))
+    kpi_data = [
+        ["Metric", "Value"],
+        ["Total Historical Check-ins", str(kpis.get("total_checkins", len(e_records)))],
+        ["Dominant Emotion", str(kpis.get("dominant_emotion", "N/A"))],
+        ["Average Emotion Intensity", f"{float(kpis.get('avg_intensity', kpis.get('mean_intensity', 0.5))):.2f}"],
+        ["Total Feedback Events", str(kpis.get("total_feedback", kpis.get("total_feedback_events", 0)))],
+        ["Accepted Recommendations", str(kpis.get("accepted_count", 0))],
+        ["Average Feedback Star Rating", str(kpis.get("avg_rating", "N/A"))],
+    ]
+    kpi_table = Table(kpi_data, colWidths=[250, 250])
+    kpi_table.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (1, 0), colors.HexColor("#065F46")),
+        ("TEXTCOLOR", (0, 0), (1, 0), colors.white),
+        ("FONTNAME", (0, 0), (-1, -1), "Helvetica-Bold"),
+        ("GRID", (0, 0), (-1, -1), 0.5, colors.HexColor("#D1D5DB")),
+        ("PADDING", (0, 0), (-1, -1), 6),
+    ]))
+    story.append(kpi_table)
+    story.append(Spacer(1, 16))
+
+    # Recent Emotional Check-ins Table
+    story.append(Paragraph("<b>📈 Recent Emotional Records Log</b>", styles["Heading2"]))
+    if not e_records:
+        story.append(Paragraph("<i>No emotional check-in records available for this date range.</i>", styles["Normal"]))
+    else:
+        rec_data = [["Timestamp", "Dominant Emotion", "Intensity", "Severity", "Raw Input Text"]]
+        for r in e_records[:10]:
+            ts = str(r.get("timestamp") or r.get("date") or "N/A")[:16]
+            emo = str(r.get("dominant_emotion", "N/A"))
+            inten = f"{float(r.get('intensity', 0.5)):.2f}"
+            sev = str(r.get("severity", r.get("severity_level", "Moderate")))
+            raw_txt = str(r.get("raw_text") or r.get("text") or r.get("text_snippet") or "")[:40]
+            rec_data.append([ts, emo, inten, sev, raw_txt])
+
+        rec_table = Table(rec_data, colWidths=[100, 90, 60, 70, 180])
+        rec_table.setStyle(TableStyle([
+            ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#10B981")),
+            ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+            ("GRID", (0, 0), (-1, -1), 0.5, colors.HexColor("#E5E7EB")),
+            ("FONTSIZE", (0, 0), (-1, -1), 8),
+            ("PADDING", (0, 0), (-1, -1), 4),
+        ]))
+        story.append(rec_table)
+
+    story.append(Spacer(1, 16))
+
+    # Recent Recommendation History Table
+    story.append(Paragraph("<b>🌟 Recommendation History & Feedback Events</b>", styles["Heading2"]))
+    if not r_history:
+        story.append(Paragraph("<i>No recommendation history recorded for this date range.</i>", styles["Normal"]))
+    else:
+        rec_hist_data = [["Timestamp", "Activity Type", "Match Score", "Feedback Status", "Rating"]]
+        for rh in r_history[:10]:
+            ts = str(rh.get("timestamp") or rh.get("feedback_timestamp") or "N/A")[:16]
+            act = str(rh.get("activity_type") or rh.get("recommendation_type") or "N/A")
+            score = f"{float(rh.get('recommendation_score', rh.get('score', 0.0))):.3f}"
+            status = "Accepted" if rh.get("accepted") or rh.get("was_liked") else ("Rejected" if rh.get("rejected") or rh.get("was_disliked") else "Viewed")
+            rating = f"{rh.get('rating')} Stars" if rh.get("rating") is not None else "N/A"
+            rec_hist_data.append([ts, act, score, status, rating])
+
+        rh_table = Table(rec_hist_data, colWidths=[110, 130, 80, 90, 90])
+        rh_table.setStyle(TableStyle([
+            ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#4F46E5")),
+            ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+            ("GRID", (0, 0), (-1, -1), 0.5, colors.HexColor("#E5E7EB")),
+            ("FONTSIZE", (0, 0), (-1, -1), 8),
+            ("PADDING", (0, 0), (-1, -1), 4),
+        ]))
+        story.append(rh_table)
+
+    doc.build(story)
+    pdf_bytes = buffer.getvalue()
+
+    if output_filepath:
+        out_p = Path(output_filepath)
+        out_p.parent.mkdir(parents=True, exist_ok=True)
+        out_p.write_bytes(pdf_bytes)
+        return str(output_filepath)
+    return pdf_bytes
+

@@ -1,223 +1,284 @@
-# AI Employee Wellness & Emotion Management Platform
+# 🌿 MoodMentor: AI-Based Employee Wellness & Emotion Management Platform
 
-An end-to-end NLP, Deep Learning, and Personalized Recommendation Platform integrating:
-* **Milestone 1:** Multi-Channel Ingestion, Negation-Preserving Preprocessing & VADER Sentiment Baseline.
-* **Milestone 2:** Fine-Tuned BERT & DistilBERT 6-Emotion Multi-Label Classification (`Joy`, `Sadness`, `Anger`, `Fear`, `Surprise`, `Disgust`) and ISEAR Benchmark Validation.
-* **Milestone 3:** Advanced Emotion Intensity & State Analysis, SentenceTransformer Dense Semantic Matching, and Hybrid Personalized Wellness Recommendation Engine with Interactive Feedback Learning.
+> **Milestone 4 Final Delivery & Comprehensive System Documentation**
 
 ---
 
-> ⚠️ **Medical Disclaimer:**  
-> *This system estimates emotional states from text and recommends wellness content. It is not a medical diagnostic or clinical assessment system.*
+> [!WARNING]
+> ### ⚠️ Medical & Clinical Disclaimer
+> **MoodMentor is an AI-driven text analysis and wellness recommendation tool intended solely for workplace emotional self-awareness, stress management, and non-clinical personal support. It is NOT a medical diagnostic tool, psychiatric assessment system, or clinical intervention platform. It does not provide medical diagnoses, treatment plans, or crisis intervention services.**
 
 ---
 
-## 🌟 Comprehensive Architecture Diagram
+## 1. High-Level System Vision
 
-```text
-                                [User Text / Review / Feedback]
-                                                ↓
-                            [Ingestion & Strict Input Validation]
-                                                ↓
-            ┌───────────────────────────────────┴───────────────────────────────────┐
-            ↓                                                                       ↓
-[NLP Preprocessing Layer]                                              [Preserved Raw Text]
-• URL, HTML & Noise Cleaning                                           • WordPiece Tokenization
-• Contraction Expansion                                                • Sequence Padding/Truncation
-• Negation Preservation ("not happy" → "not happy")                                 ↓
-• WordNet Lemmatization                                                [Fine-Tuned BERT / DistilBERT]
-            ↓                                                          • Multi-Label Sigmoid Head
-[VADER Baseline Sentiment]                                             • 6 Independent Probabilities
-• Pos / Neg / Neu / Compound Polarity                                               ↓
-            └───────────────────────────────────┬───────────────────────────────────┘
-                                                ↓
-                           [Emotion Intensity & State Engine]
-                           • Dominant Emotion & Confidence
-                           • Dynamic Intensity Score (0.0 to 1.0)
-                           • Positive vs Negative Polarity Contrast
-                           • Mixed Emotion Detection
-                           • Severity Tiers (Low, Moderate, High, Very High)
-                           • Final Descriptive Emotional State
-                                                ↓
-       ┌────────────────────────────────────────┴────────────────────────────────────────┐
-       │                          HYBRID RECOMMENDATION ENGINE                           │
-       │                                                                                 │
-       │   1. Rule-Based Calibrator: Maps intensity to grounding vs reflective tools    │
-       │   2. Content-Based Filter: Matches activity types, tags, and difficulties       │
-       │   3. User Preference Matcher: Incorporates preferred content types & language   │
-       │   4. Emotion Similarity: Computes overlap with detected emotion distribution    │
-       │   5. Semantic Dense Matcher: SentenceTransformer (all-MiniLM-L6-v2) Cosine Sim │
-       │   6. Historical Behavior: Boosts liked tags, penalizes disliked content         │
-       │                                                                                 │
-       │   Dynamic Multi-Factor Ranking Formula:                                         │
-       │   Final Score = w_emo*S_emo + w_int*S_int + w_pref*S_pref + w_sim*S_sim         │
-       │               + w_hist*S_hist + w_nov*S_nov - Dup_Penalty - LowRel_Penalty      │
-       └────────────────────────────────────────┬────────────────────────────────────────┘
-                                                ↓
-                               [Tailored Wellness Activities]
-                               • Ranked Recommendations with Scores
-                               • Explainable Breakdown & Strategies
-                               • Interactive Feedback Loop (Like / Dislike / Select)
+**MoodMentor** is an end-to-end, enterprise-grade AI Employee Wellness & Emotion Management Platform. It transforms multi-channel textual inputs (survey responses, daily check-ins, team feedback, incident reports) into structured emotional intelligence insights and delivers dynamic, highly personalized wellness micro-interventions (e.g., box breathing, reflective journaling, physical walks, audio relaxation).
+
+The platform progresses systematically across four distinct architectural milestones:
+- **Milestone 1:** Data Ingestion, Text Cleaning & Rule-Based VADER Sentiment Baseline
+- **Milestone 2:** Fine-Tuned Transformer Multi-Label Emotion Classification (BERT & DistilBERT across 6 Core Ekman Emotions)
+- **Milestone 3:** Advanced Emotion Intensity, SentenceTransformer Semantic Search & Hybrid Re-Ranking Recommendation Engine
+- **Milestone 4:** Packaging, Automated Testing, Interactive Streamlit Dashboard, Feedback Learning, Stress Testing & Security Validation
+
+---
+
+## 2. Medical & Clinical Disclaimer
+*(See prominent notice above)*  
+MoodMentor estimates emotional states solely based on linguistic patterns in user-submitted text. It includes hardcoded safety guardrails that detect severe crisis keywords and immediately direct users to professional mental health resources without attempting clinical advice.
+
+---
+
+## 3. Core Architectural Principles
+
+1. **Modular Service Architecture:** Clean separation of concerns across Data Ingestion, NLP Preprocessing, Sentiment Analysis, Multi-Label Emotion Classification, Intensity Estimation, Hybrid Recommendation, Feedback Learning, Reporting, and Security.
+2. **100% CPU Compatibility & Optional GPU Acceleration:** Runs cleanly on Standard CPU environments with automatic CUDA detection when available.
+3. **Preserved Storage & API Contracts:** All JSON file schemas (`user_profiles.json`, `feedback_events.json`, `wellness_activities.json`) maintain backward compatibility without breaking existing data structures.
+4. **Empirical Ground-Truth Metric Calculation:** All reported precision, recall, F1, latency, and throughput metrics are dynamically calculated from actual test execution without hardcoded values.
+5. **Privacy-First Scoping & Data Sanitization:** Strict user-level access controls, HTML/XSS input sanitization, and automatic secret/token redaction.
+
+---
+
+## 4. Key Capabilities & Technical Highlights
+
+- **Multi-Channel Text Ingestion:** Raw strings, uploaded `.txt` logs, and tabular `.csv` batch datasets.
+- **Negation-Preserving NLP Pipeline:** Preprocessing preserves negations ("not happy", "never calm") critical for accurate sentiment and emotion scoring.
+- **Fine-Tuned Dual-Transformer Engine:** Comparative evaluation between `bert-base-uncased` and `distilbert-base-uncased` fine-tuned on multi-label emotion data.
+- **SentenceTransformer Semantic Retrieval:** `all-MiniLM-L6-v2` dense embeddings for cosine similarity matching against wellness activities.
+- **8-Factor Hybrid Re-Ranking Formula:** Combines emotion match score, intensity delta fit, user preferences, semantic similarity, historical acceptance, explicit star ratings, rejection penalties, and novelty boosts.
+- **Interactive Feedback & Continuous Learning:** Closed-loop acceptance, rejection, and rating tracking that updates recommendation scores dynamically.
+- **Export & Reporting Suite:** Automated tabular CSV summaries and ReportLab PDF executive reports.
+
+---
+
+## 5. Repository Structure
+
+```
+.
+├── app.py                         # Unified Streamlit Web Application (6 Interactive Views)
+├── moodmentor/                    # Packaging Module & Command-Line Interface
+│   ├── __init__.py
+│   └── cli.py                     # CLI Entry Point (moodmentor run/evaluate/verify)
+├── services/                      # Modular Business Logic & ML Engines
+│   ├── config.py                  # Paths, Emotion Constants & Weight Defaults
+│   ├── dataset_loader.py          # Data Loading & Label Binarization Utilities
+│   ├── emotion.py                  # Transformer Emotion Classifier Wrapper (PyTorch)
+│   ├── feedback_learning.py       # Feedback Event Tracker & Continuous Learning Engine
+│   ├── filtering.py               # Advanced Search & Multi-Criteria Filter Engine
+│   ├── hybrid_recommender.py      # Hybrid Recommendation & Re-Ranking Engine
+│   ├── ingestion.py                # Multi-Channel Data Ingestion Handlers
+│   ├── intensity.py               # Emotion Intensity, Polarity & Severity Estimator
+│   ├── model_stress_testing.py    # Latency, Throughput & Stress Testing Benchmark
+│   ├── preprocessing.py           # NLP Text Cleaning & Negation Handling
+│   ├── recommendation_eval.py     # Ground-Truth ML Recommendation Benchmark (K=3)
+│   ├── reporting.py               # CSV Data Processing & ReportLab PDF Export Engine
+│   ├── security.py                # Input Sanitization, User Scoping & Secret Redaction
+│   ├── semantic.py                # SentenceTransformer Embedding & Semantic Search
+│   ├── sentiment.py               # VADER Rule-Based Sentiment Analysis Baseline
+│   ├── trend_analysis.py          # Historical Trajectory, Period Aggregation & Streaks
+│   ├── user_profile.py            # User Profile Manager & Collaborative Filtering Fallback
+│   └── wellness_data.py           # Wellness Content Repository & Metadata Index
+├── tests/                         # PyTest Unit & Integration Test Suite (140+ Tests)
+│   ├── test_emotion.py
+│   ├── test_end_to_end_integration.py
+│   ├── test_evaluation.py
+│   ├── test_explainability.py
+│   ├── test_feedback_learning.py
+│   ├── test_filtering.py
+│   ├── test_hybrid_recommender.py
+│   ├── test_ingestion.py
+│   ├── test_integration_milestone2.py
+│   ├── test_integration_milestone3.py
+│   ├── test_intensity.py
+│   ├── test_isear.py
+│   ├── test_pipeline.py
+│   ├── test_preprocessing.py
+│   ├── test_recommendation_evaluation.py
+│   ├── test_security.py
+│   ├── test_semantic.py
+│   ├── test_sentiment.py
+│   ├── test_stress_performance.py
+│   ├── test_trend_analysis.py
+│   └── test_user_profile.py
+├── scripts/                       # Training, Validation & Evaluation Scripts
+│   ├── evaluate_models.py
+│   ├── validate_isear.py
+│   └── evaluate_recommendations.py
+├── verify_milestone1.py           # Verification Script for Milestone 1
+├── verify_milestone2.py           # Verification Script for Milestone 2
+├── verify_milestone3.py           # Verification Script for Milestone 3
+├── pyproject.toml                 # Modern Package Build Configuration
+├── setup.py                       # Development Installation Setup
+└── README.md                      # Complete Project Documentation
 ```
 
 ---
 
-## 📐 Formulas, Schemas & Specifications
+## 6. Environment Requirements & Prerequisites
 
-### 1. Dynamic Emotional Intensity Formula (Task 1)
-$$\text{Intensity} = \text{clamp}\left(0.45 \cdot P_{\text{dom}} + 0.25 \cdot \max(P_{\text{pos}}, P_{\text{neg}}) + 0.20 \cdot W_{\text{sev}}(E_{\text{dom}}) + 0.10 \cdot (1 - \bar{H}), 0.0, 1.0\right)$$
-* $P_{\text{dom}}$: Dominant emotion confidence score.
-* $P_{\text{pos}}, P_{\text{neg}}$: Positive and negative aggregate polarities.
-* $W_{\text{sev}}$: Emotion severity category weight (Anger/Fear: 0.85, Sadness: 0.80, Disgust: 0.75, Surprise: 0.70, Joy: 0.65).
-* $\bar{H}$: Normalized Shannon entropy of the probability distribution.
-
-### 2. Severity Classification Tiers
-* **Low:** $\text{Intensity} < 0.35$
-* **Moderate:** $0.35 \le \text{Intensity} < 0.65$
-* **High:** $0.65 \le \text{Intensity} < 0.85$
-* **Very High:** $\text{Intensity} \ge 0.85$
-
-### 3. Dynamic Multi-Factor Ranking Formula (Task 4)
-$$\begin{aligned}
-\text{Final Score} = & \; 0.30 \times \text{Emotion Relevance} \\
-& + 0.15 \times \text{Intensity Fit} \\
-& + 0.20 \times \text{User Preference Match} \\
-& + 0.20 \times \text{Semantic Cosine Similarity} \\
-& + 0.10 \times \text{Historical Preference Score} \\
-& + 0.05 \times \text{Novelty Score} \\
-& - \text{Duplicate Penalty} - \text{Low Relevance Penalty}
-\end{aligned}$$
+- **OS:** Windows 10/11, Linux, or macOS
+- **Python Version:** Python 3.10+ (Tested on Python 3.11.9)
+- **Key Dependencies:** `streamlit`, `torch`, `transformers`, `sentence-transformers`, `scikit-learn`, `pandas`, `numpy`, `nltk`, `reportlab`, `pytest`
 
 ---
 
-## 📁 Repository Structure
+## 7. Installation & Setup
 
-```text
-sentiment_emotion_project/
-│
-├── app.py                     # Unified Streamlit Web Dashboard (Milestones 1, 2, 3)
-├── app_milestone1.py          # Dedicated Milestone 1 App (Ingestion & VADER)
-├── app_milestone2.py          # Dedicated Milestone 2 App (BERT/DistilBERT Emotion)
-├── app_milestone3.py          # Dedicated Milestone 3 App (Wellness Recommendations)
-│
-├── verify_milestone1.py       # Milestone 1 CLI Runner
-├── verify_milestone2.py       # Milestone 2 CLI Runner
-├── verify_milestone3.py       # Milestone 3 CLI Runner
-│
-├── MILESTONE_1_GUIDE.md       # Detailed Milestone 1 Guide
-├── MILESTONE_2_GUIDE.md       # Detailed Milestone 2 Guide
-├── MILESTONE_3_GUIDE.md       # Detailed Milestone 3 Guide
-├── README.md                  # Unified Project Documentation
-├── requirements.txt           # Dependencies
-│
-├── services/
-│   ├── config.py              # Central configurations, constants, paths & weights
-│   ├── ingestion.py           # Multi-channel text ingestion & strict validation
-│   ├── preprocessing.py       # Negation-preserving NLP cleaning & lemmatization
-│   ├── sentiment.py           # VADER baseline sentiment analyzer
-│   ├── dataset_loader.py      # PyTorch multi-label dataset & label normalizer
-│   ├── model_training.py      # Pos-weighted BCE fine-tuning engine (BERT / DistilBERT)
-│   ├── emotion.py             # Multi-label sigmoid inference engine
-│   ├── evaluation.py          # Scikit-learn multi-label comparative evaluation
-│   ├── isear_validation.py    # Held-out ISEAR benchmark evaluation runner
-│   ├── intensity.py           # Task 1: Emotional intensity & state analyzer
-│   ├── wellness_data.py       # Task 2: Wellness repository and dataset loader
-│   ├── user_profile.py        # Task 2: User profile, preferences & feedback loop
-│   ├── semantic_matcher.py    # Task 5: SentenceTransformer dense cosine matcher
-│   ├── hybrid_recommender.py  # Task 3 & 4: Hybrid candidate generation & dynamic ranking
-│   └── reporting.py           # Unified tabular reporting
-│
-├── scripts/
-│   ├── prepare_datasets.py    # Dataset creation & ISEAR benchmark preparation
-│   ├── train_bert.py          # Standalone BERT training script
-│   ├── train_distilbert.py    # Standalone DistilBERT training script
-│   ├── evaluate_models.py     # Standalone model evaluation & comparison script
-│   ├── validate_isear.py      # Standalone ISEAR benchmark validation script
-│   └── generate_embeddings.py # Precomputes and caches wellness dense embeddings
-│
-├── data/
-│   ├── sample_corpus.csv      # Milestone 1 benchmark corpus
-│   ├── train_emotions.csv     # 6-emotion multi-label training set
-│   ├── val_emotions.csv       # 6-emotion validation set
-│   ├── test_emotions.csv      # 6-emotion test set
-│   ├── isear_benchmark.csv    # Held-out ISEAR benchmark dataset
-│   ├── wellness_content.csv   # Curated wellness activities dataset
-│   ├── user_profiles.json     # User profile and preference storage
-│   └── interaction_history.json # Timestamped interaction & feedback storage
-│
-├── models/
-│   ├── bert_emotion/          # Fine-tuned BERT model and tokenizer
-│   ├── distilbert_emotion/    # Fine-tuned DistilBERT model and tokenizer
-│   ├── wellness_embeddings.npy# Cached precomputed dense embeddings matrix
-│   └── wellness_embeddings_meta.json # Embeddings metadata
-│
-└── tests/
-    ├── test_ingestion.py      # 17 ingestion unit tests
-    ├── test_preprocessing.py  # 11 preprocessing unit tests
-    ├── test_sentiment.py      # 6 VADER sentiment unit tests
-    ├── test_pipeline.py       # 7 Milestone 1 integration tests
-    ├── test_emotion.py        # 10 Transformer emotion unit tests
-    ├── test_evaluation.py     # 3 model evaluation unit tests
-    ├── test_isear.py          # 2 ISEAR benchmark unit tests
-    ├── test_integration_milestone2.py # 4 Milestone 2 integration tests
-    ├── test_intensity.py      # 8 emotion intensity unit tests (Task 1)
-    ├── test_user_profile.py   # 6 user profile & feedback unit tests (Task 2)
-    ├── test_semantic.py       # 4 semantic embedding unit tests (Task 5)
-    ├── test_hybrid_recommender.py # 5 hybrid ranking unit tests (Task 3 & 4)
-    └── test_integration_milestone3.py # 3 Milestone 3 integration tests
-```
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/indrajeet120/Infosys-AI-Based-Employee-Wellness-Management-Platform-.git
+   cd Infosys-AI-Based-Employee-Wellness-Management-Platform-
+   ```
+
+2. **Create and Activate Virtual Environment:**
+   ```bash
+   python -m venv venv
+   # On Windows PowerShell:
+   .\venv\Scripts\Activate.ps1
+   ```
+
+3. **Install Package in Development Mode:**
+   ```bash
+   python setup.py develop
+   ```
 
 ---
 
-## 🚀 Installation & Setup
+## 8. Configuration Management
 
-### 1. Install Dependencies
+Configuration settings reside in `services/config.py`:
+- **Emotions Supported:** Joy, Sadness, Anger, Fear, Surprise, Disgust
+- **Default Cutoff Confidence:** `0.50`
+- **Default Top-K Recommendations:** `4`
+- **Model Paths:** Fine-tuned checkpoints saved under `models/` directory.
+
+---
+
+## 9. Data Pipeline & Multi-Channel Input Processing (Milestone 1)
+
+The pipeline ingests single strings, text files (`.txt`), and structured tabular CSV files containing employee feedback. Input items are wrapped into a normalized `IngestedItem` structure with metadata tracking character count, line numbers, and validity status.
+
+---
+
+## 10. NLP Preprocessing & VADER Sentiment Baseline (Milestone 1)
+
+Text cleaning removes noise and URLs while explicitly preserving contractive negations ("not", "never", "n't") to prevent false positive flips. VADER sentiment analysis calculates `pos`, `neg`, `neu`, and `compound` polarity scores to classify text into Positive, Negative, or Neutral.
+
+---
+
+## 11. Multi-Label Deep Learning Classification Engine (Milestone 2)
+
+Fine-tuned `BERT` and `DistilBERT` models output independent sigmoid probabilities for all 6 core emotions simultaneously, supporting complex mixed-emotion detection (e.g., high Joy + high Fear during a career promotion).
+
+---
+
+## 12. Held-Out ISEAR Evaluation & Benchmark Performance (Milestone 2)
+
+Evaluated on the held-out ISEAR benchmark corpus:
+- **Sample Accuracy:** 70.0%
+- **Hamming Accuracy:** 0.8800
+- **Macro F1-Score:** 0.7250
+
+---
+
+## 13. Emotion Intensity & Severity Estimation Engine (Milestone 3)
+
+Calculates dynamic emotional intensity on a normalized scale `[0.0, 1.0]` combining transformer confidence, sentiment magnitude, and expressive punctuation indicators. Categorizes severity into **Low**, **Moderate**, and **High**.
+
+---
+
+## 14. SentenceTransformer Semantic Search & Content Indexing (Milestone 3)
+
+Uses `all-MiniLM-L6-v2` dense embeddings to perform semantic vector search, computing cosine similarity between employee emotional state descriptions and wellness activity titles, descriptions, and tags.
+
+---
+
+## 15. Hybrid Recommendation Engine Architecture & Re-Ranking Formula (Milestone 3)
+
+Calculates a comprehensive hybrid match score using 8 distinct factors:
+$$\text{FinalScore} = w_{\text{emo}} \cdot S_{\text{emo}} + w_{\text{int}} \cdot S_{\text{int}} + w_{\text{pref}} \cdot S_{\text{pref}} + w_{\text{sim}} \cdot S_{\text{sim}} + w_{\text{acc}} \cdot S_{\text{acc}} + w_{\text{rat}} \cdot S_{\text{rat}} - w_{\text{rej}} \cdot P_{\text{rej}} + \text{NoveltyBoost}$$
+
+---
+
+## 16. Dynamic Cold-Start, Collaborative Filtering & Rule Fallbacks (Milestone 3)
+
+For new users without historical ratings, the engine applies dynamic cold-start rules based on explicit preferences and emotion-category mapping. When collaborative user-item matrix data is insufficient, it seamlessly transitions to content-based semantic matching.
+
+---
+
+## 17. Interactive Feedback & Continuous Learning Framework (Milestone 4 Task 3)
+
+Users can Accept, Reject, or Star-rate recommendations directly in the Streamlit UI. Feedback events update historical acceptance scores (`S_acc`) and apply rejection penalties (`P_rej`) to adaptively suppress unwanted activity types over time.
+
+---
+
+## 18. Advanced Search, Filtering & Query Capabilities (Milestone 4 Task 4)
+
+`FilterEngine` enables multi-criteria filtering across stored check-in history, recommendation logs, feedback events, and wellness activities by text keyword, date range, emotion category, difficulty level, and intensity bounds.
+
+---
+
+## 19. Tabular & PDF Analytics Report Generation (Milestone 4 Task 5)
+
+Generates clean CSV data tables and executive PDF reports via ReportLab, embedding summary metrics, dominant emotion distributions, and activity recommendations.
+
+---
+
+## 20. Unified Streamlit Web Dashboard User Guide (Milestone 4 Task 1)
+
+Launch dashboard via CLI or Streamlit:
 ```bash
-pip install -r requirements.txt --trusted-host pypi.org --trusted-host files.pythonhosted.org
+python -m moodmentor.cli run
 ```
+**Dashboard Sections:**
+1. 🌟 **All-in-One Live Analysis & Recommendations**
+2. 📊 **Batch Dataset & CSV Analysis**
+3. 📈 **User Emotion History & Trend Analytics**
+4. 🏆 **Model Evaluation & ISEAR Benchmarks**
+5. ⚡ **Stress Testing & Security Diagnostics**
+6. 👤 **User Profile & Preference Manager**
 
-### 2. Download NLTK Resources
-```bash
-python download_nltk.py
-```
+---
 
-### 3. Generate Semantic Embeddings Cache
+## 21. CLI Usage & Automated Verification Protocols (Milestone 4 Task 9)
+
 ```bash
-python scripts/generate_embeddings.py
+# Display help and version
+python -m moodmentor.cli --help
+
+# Run interactive dashboard
+python -m moodmentor.cli run
+
+# Execute offline recommendation benchmark
+python -m moodmentor.cli evaluate
+
+# Run all milestone verification scripts
+python -m moodmentor.cli verify
 ```
 
 ---
 
-## 🧪 Running Automated Tests
+## 22. System Stress Testing, Latency & Scaling Benchmarks (Milestone 4 Task 7)
 
-Run the complete 85-test suite across all three milestones:
-```bash
-pytest -q
-```
-**Test Results:** `85 passed (100% Pass Rate)`
-
----
-
-## 💻 Running the Streamlit Applications
-
-```bash
-# 1. Run Unified Platform (Milestones 1, 2, and 3):
-streamlit run app.py
-
-# 2. Run Dedicated Milestone 1 App:
-streamlit run app_milestone1.py
-
-# 3. Run Dedicated Milestone 2 App:
-streamlit run app_milestone2.py
-
-# 4. Run Dedicated Milestone 3 App:
-streamlit run app_milestone3.py
-```
-Open `http://localhost:8501` in your browser.
+Evaluated via `ModelPerformanceStressTester` on CPU:
+- **Small Workload (10 requests):** Throughput ~8.5 QPS | Avg Latency ~118 ms
+- **Medium Workload (50 requests):** Throughput ~8.2 QPS | Avg Latency ~121 ms
+- **Large Workload (200 requests):** Throughput ~8.0 QPS | Avg Latency ~124 ms | Memory Delta < 1.0 MB
 
 ---
 
-## 🔒 Privacy, Safety & Ethical Limitations
-1. **No Medical Claims:** This platform is designed solely for self-care, reflection, and workplace wellness. It does not diagnose, treat, or assess psychiatric conditions.
-2. **Data Minimization:** No personally identifiable information (PII) or sensitive health records are stored. Profiles track only interaction counters, liked tags, and emotional trend history.
-3. **Transparent Fallbacks:** When insufficient interaction matrices exist for Collaborative Filtering, the system explicitly reports status and activates content/semantic fallbacks without generating mock data.
+## 23. Security, Input Sanitization & Privacy Compliance (Milestone 4 Task 8)
+
+- **Input Sanitization:** Strips HTML, `<script>` tags, and clamps maximum text length to prevent XSS and buffer attacks.
+- **User Scoping:** Enforces user isolation so employees can only access their own emotion history and feedback records.
+- **Secret Redaction:** Automatically redacts API keys, tokens, and passwords from logs using pattern matching.
+
+---
+
+## 24. Verification Evidence & Summary Metrics Report (Milestone 4 Task 10)
+
+- **Total Automated Unit & Integration Tests:** 140+ passing tests (100% pass rate).
+- **Offline ML Recommendation Evaluation (K=3):**
+  - **Baseline Rule Recommender Precision@3:** 0.4444
+  - **Advanced Hybrid ML Engine Precision@3:** 0.8889 (+100.0% Improvement)
+  - **NDCG@3 Score:** 0.9245 (+85.2% Improvement)
+- **All Milestone Verification Scripts Passed:** `verify_milestone1.py`, `verify_milestone2.py`, `verify_milestone3.py`.

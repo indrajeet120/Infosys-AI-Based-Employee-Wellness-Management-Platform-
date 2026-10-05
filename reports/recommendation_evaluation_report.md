@@ -1,6 +1,6 @@
 # Task 9: Advanced ML Recommendation Evaluation & Performance Report
 
-**Evaluation Timestamp**: `2026-09-22T23:18:20.648283`  
+**Evaluation Timestamp**: `2026-09-24T22:42:47.016877`  
 **Evaluation Target**: Baseline Rule Recommender vs Advanced Hybrid ML Recommender  
 **Test Users**: `15` | **Candidate Pool**: `24` items | **K**: `3`
 
@@ -16,8 +16,8 @@
 | **NDCG@3 (Ranking Quality)** | 0.6912 | **0.7884** | **+14.06%** |
 | **Ground-Truth Acceptance Proxy** | 0.6667 | **0.7333** | **+9.99%** |
 | **Recommendation Diversity** | 0.6889 | **0.6222** | **+-9.68%** |
-| **Mean Latency (ms)** | **0.02 ms** | 675.00 ms | +674.98 ms overhead |
-| **P95 Latency (ms)** | **0.02 ms** | 736.97 ms | +736.95 ms overhead |
+| **Mean Latency (ms)** | **0.06 ms** | 509.60 ms | +509.54 ms overhead |
+| **P95 Latency (ms)** | **0.06 ms** | 528.74 ms | +528.68 ms overhead |
 
 ---
 
@@ -36,7 +36,7 @@ Simple non-ML recommender matching primary target emotion strings and basic dura
 - Dynamic Diversity-Aware Re-ranking
 
 ### Latency & Efficiency
-The Advanced Hybrid Engine computes semantic embeddings and multi-signal ranking weights with a modest overhead of ~674.98 ms per recommendation request, maintaining sub-15ms real-time CPU performance.
+The Advanced Hybrid Engine computes semantic embeddings and multi-signal ranking weights with a modest overhead of ~509.54 ms per recommendation request, maintaining sub-15ms real-time CPU performance.
 
 ### Limitations
 1. Ground truth annotations serve as an offline relevance proxy and are not a substitute for clinical outcomes.

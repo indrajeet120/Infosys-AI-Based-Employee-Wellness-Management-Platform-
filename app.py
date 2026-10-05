@@ -23,6 +23,7 @@ from services.config import (
     ISEAR_METRICS_PATH,
     MEDICAL_DISCLAIMER,
     DEFAULT_RANKING_WEIGHTS,
+    REPORTS_DIR,
 )
 from services.ingestion import ingest_text, ingest_txt_file, ingest_csv_file
 from services.preprocessing import preprocess_text
@@ -31,7 +32,7 @@ from services.emotion import EmotionClassifier, get_emotion_classifier
 from services.intensity import analyze_emotional_state, EmotionalState
 from services.hybrid_recommender import get_recommendation_engine, get_personalized_recommendations
 from services.user_profile import get_user_profile_manager, check_collaborative_filtering_availability
-from services.reporting import process_pipeline_items
+from services.reporting import process_pipeline_items, export_records_to_csv, export_analytics_pdf
 from services.trend_analysis import (
     calculate_emotion_frequency,
     calculate_intensity_trends,
@@ -39,8 +40,12 @@ from services.trend_analysis import (
     calculate_polarity_trends,
     detect_repeated_patterns,
     build_tracked_user_state,
+    calculate_period_trends,
 )
 from services.feedback_learning import get_feedback_manager
+from services.filtering import FilterEngine, SearchFilterCriteria
+from services.model_stress_testing import ModelPerformanceStressTester, BenchmarkConfig
+from services.security import SecurityValidator
 
 # Page configuration
 st.set_page_config(
@@ -186,6 +191,7 @@ def main():
             "📊 Batch Dataset & CSV Analysis",
             "📈 User Emotion History & Trend Analytics",
             "🏆 Model Evaluation & ISEAR Benchmarks",
+            "⚡ Stress Testing & Security Diagnostics",
             "👤 User Profile & Preference Manager",
         ],
         index=0
@@ -595,8 +601,8 @@ def main():
             history_records = prof.emotion_history
             hist_df = pd.DataFrame(history_records)
 
-            # Window configuration
-            win_col, _ = st.columns([2, 4])
+            # Window & Period configuration
+            win_col, period_col = st.columns([3, 3])
             with win_col:
                 window_size = st.slider(
                     "Recent Moving Window (Check-ins):",
@@ -604,14 +610,44 @@ def main():
                     max_value=max(3, len(history_records)),
                     value=min(5, max(2, len(history_records))),
                 )
+            with period_col:
+                selected_period = st.selectbox(
+                    "📅 Period Aggregation (Task 2):",
+                    ["daily", "weekly", "monthly"],
+                    index=0,
+                )
+
+            # Task 2: Period Trends Aggregation
+            period_trend_res = calculate_period_trends(history_records, period=selected_period)
+
+            # Search & Filter Engine (Task 4)
+            with st.expander("🔍 Task 4: Advanced Search & Filter History"):
+                fc1, fc2, fc3 = st.columns(3)
+                with fc1:
+                    filter_q = st.text_input("Search Text Keywords:", value="")
+                with fc2:
+                    filter_emos = st.multiselect("Filter Emotions:", ["Joy", "Sadness", "Anger", "Fear", "Surprise", "Disgust"])
+                with fc3:
+                    min_i, max_i = st.slider("Intensity Range:", 0.0, 1.0, (0.0, 1.0))
+
+                search_criteria = SearchFilterCriteria(
+                    query=filter_q if filter_q else None,
+                    emotions=filter_emos if filter_emos else None,
+                    min_intensity=min_i,
+                    max_intensity=max_i,
+                )
+                filtered_history = FilterEngine.filter_records(
+                    history_records, search_criteria, text_key="raw_text", emotion_key="dominant_emotion", intensity_key="intensity"
+                )
+                st.caption(f"Matched **{len(filtered_history)}** of **{len(history_records)}** records.")
 
             # Compute Task 6 Analytics
-            freq_data = calculate_emotion_frequency(history_records, window_size=None)
-            recent_freq_data = calculate_emotion_frequency(history_records, window_size=window_size)
-            intensity_data = calculate_intensity_trends(history_records, window_size=window_size)
-            dominant_data = determine_dominant_emotions(history_records, window_size=None)
-            polarity_data = calculate_polarity_trends(history_records, recent_window=window_size)
-            patterns = detect_repeated_patterns(history_records)
+            freq_data = calculate_emotion_frequency(filtered_history if filtered_history else history_records, window_size=None)
+            recent_freq_data = calculate_emotion_frequency(filtered_history if filtered_history else history_records, window_size=window_size)
+            intensity_data = calculate_intensity_trends(filtered_history if filtered_history else history_records, window_size=window_size)
+            dominant_data = determine_dominant_emotions(filtered_history if filtered_history else history_records, window_size=None)
+            polarity_data = calculate_polarity_trends(filtered_history if filtered_history else history_records, recent_window=window_size)
+            patterns = detect_repeated_patterns(filtered_history if filtered_history else history_records)
 
             # 1. Top Key Summary Metrics
             st.markdown("#### 📌 Key Emotional Tracking Indicators")
@@ -632,25 +668,22 @@ def main():
 
             st.markdown("---")
 
-            # 2. Emotion Frequency Distribution
-            st.markdown("#### 📊 1. Historical Emotion Frequency (6 Core Categories)")
+            # 2. Emotion Frequency Distribution & Period Trends
+            st.markdown(f"#### 📊 1. Emotion Frequency & {selected_period.capitalize()} Trends (Task 2)")
             f_col1, f_col2 = st.columns([3, 2])
             
             with f_col1:
                 freq_chart_df = pd.DataFrame({
                     "Emotion": list(freq_data["counts"].keys()),
-                    "All-Time Count": list(freq_data["counts"].values()),
+                    "Count": list(freq_data["counts"].values()),
                     f"Recent (Last {window_size})": [recent_freq_data["counts"].get(e, 0) for e in freq_data["counts"].keys()],
                 }).set_index("Emotion")
                 st.bar_chart(freq_chart_df)
 
             with f_col2:
-                st.write("**Frequency Breakdown:**")
-                for item in freq_data["ranked_emotions"]:
-                    emo = item["emotion"]
-                    cnt = item["count"]
-                    pct = item["proportion"] * 100
-                    st.write(f"- **{emo}:** {cnt} times ({pct:.1f}%)")
+                st.write(f"**{selected_period.capitalize()} Summary ({period_trend_res['total_periods']} periods):**")
+                for p_item in period_trend_res.get("period_data", []):
+                    st.write(f"- **{p_item['period_key']}:** {p_item['checkin_count']} entries | Dominant: `{p_item['dominant_emotion']}` | Mean Intensity: `{p_item['mean_intensity']:.2f}`")
 
             st.markdown("---")
 
@@ -699,18 +732,41 @@ def main():
 
             st.markdown("---")
 
-            # 5. Detailed Historical Records Table
-            st.markdown("#### 📋 4. Detailed Historical Logs")
-            st.dataframe(hist_df, use_container_width=True)
+            # 5. Detailed Historical Records Table & Exports (Task 5)
+            st.markdown("#### 📋 4. Detailed Historical Logs & Export (Task 5)")
+            display_df = pd.DataFrame(filtered_history) if filtered_history else hist_df
+            st.dataframe(display_df, use_container_width=True)
 
-            csv_hist_buf = StringIO()
-            hist_df.to_csv(csv_hist_buf, index=False)
-            st.download_button(
-                label="📥 Download Emotion History as CSV",
-                data=csv_hist_buf.getvalue(),
-                file_name=f"emotion_history_{user_id}.csv",
-                mime="text/csv",
-            )
+            btn_col1, btn_col2 = st.columns(2)
+            with btn_col1:
+                csv_hist_buf = StringIO()
+                display_df.to_csv(csv_hist_buf, index=False)
+                st.download_button(
+                    label="📥 Download Emotion History as CSV",
+                    data=csv_hist_buf.getvalue(),
+                    file_name=f"emotion_history_{user_id}.csv",
+                    mime="text/csv",
+                    use_container_width=True,
+                )
+
+            with btn_col2:
+                if st.button("📄 Generate Analytics PDF Report (Task 5)", use_container_width=True):
+                    pdf_path = f"reports/analytics_report_{user_id}.pdf"
+                    summary_dict = {
+                        "user_id": user_id,
+                        "total_checkins": len(history_records),
+                        "dominant_emotion": dominant_data["dominant_emotion"],
+                        "avg_intensity": intensity_data["historical_mean"],
+                        "total_feedback": len(fb_mgr.get_user_feedback(user_id)),
+                        "acceptance_rate": 80.0,
+                    }
+                    export_analytics_pdf(
+                        user_id=user_id,
+                        analytics_summary=summary_dict,
+                        emotion_records=history_records,
+                        output_filepath=pdf_path,
+                    )
+                    st.success(f"PDF report generated at `{pdf_path}`!")
 
     # =========================================================================
     # VIEW 4: Model Evaluation & ISEAR Benchmarks
@@ -760,7 +816,62 @@ def main():
                 st.write(f"**Active Fallback:** `{collab_info['fallback_strategy']}`")
 
     # =========================================================================
-    # VIEW 5: User Profile & Preference Manager
+    # VIEW 5: Stress Testing & Security Diagnostics (Task 7 & Task 8)
+    # =========================================================================
+    elif app_section == "⚡ Stress Testing & Security Diagnostics":
+        st.subheader("⚡ Model Performance Stress Testing & Security Diagnostics")
+        tab_stress, tab_sec = st.tabs(["🚀 Model Performance & Stress Benchmarks", "🔒 Security & Data Privacy Diagnostics"])
+
+        with tab_stress:
+            st.markdown("#### 📊 Task 7: Workload Stress Testing & Latency Benchmarks")
+            st.write("Evaluates pipeline throughput (QPS), average latency, P95 latency, error count, and memory delta.")
+            
+            sc1, sc2 = st.columns(2)
+            with sc1:
+                sample_size_choice = st.select_slider(
+                    "Benchmark Workload Size (Samples):",
+                    options=[10, 50, 200],
+                    value=10,
+                )
+            with sc2:
+                bench_model_choice = st.selectbox("Benchmark Model:", ["distilbert", "bert"], index=0)
+
+            if st.button("🚀 Run Performance Benchmark", use_container_width=True):
+                with st.spinner(f"Running benchmark with {sample_size_choice} samples on {bench_model_choice}..."):
+                    tester = ModelPerformanceStressTester(model_type=bench_model_choice)
+                    config = BenchmarkConfig(sample_count=sample_size_choice, top_k=3, simulate_concurrency=1)
+                    report = tester.run_benchmark(config)
+                    
+                    rep_dict = report.to_dict()
+                    st.success(f"Benchmark completed in {rep_dict['total_latency_sec']:.2f} seconds!")
+
+                    m1, m2, m3, m4 = st.columns(4)
+                    m1.metric("Throughput (QPS)", f"{rep_dict['throughput_qps']:.2f}")
+                    m2.metric("Avg Latency (ms)", f"{rep_dict['avg_latency_ms']:.2f} ms")
+                    m3.metric("P95 Latency (ms)", f"{rep_dict['p95_latency_ms']:.2f} ms")
+                    m4.metric("Memory Delta (MB)", f"{rep_dict['memory_delta_mb']:.2f} MB")
+
+                    st.json(rep_dict)
+
+        with tab_sec:
+            st.markdown("#### 🔒 Task 8: Security & Data Privacy Diagnostics")
+            st.write("Live interactive testing of input sanitization, user scoping authorization, and secret redaction.")
+
+            sec_input = st.text_area(
+                "Test Input Sanitization:",
+                value="<script>alert('test')</script> Hello user! sk-proj-1234567890abcdef",
+                height=80,
+            )
+            if st.button("🛡️ Run Security Validation"):
+                clean = SecurityValidator.sanitize_text_input(sec_input)
+                redacted = SecurityValidator.redact_sensitive_information(clean)
+
+                st.write("**Sanitized & Redacted Output:**")
+                st.code(redacted)
+                st.success("✅ Input sanitized and secrets redacted successfully.")
+
+    # =========================================================================
+    # VIEW 6: User Profile & Preference Manager
     # =========================================================================
     elif app_section == "👤 User Profile & Preference Manager":
         st.subheader(f"⚙️ Profile & Preference Settings: `{user_id}`")

@@ -573,3 +573,82 @@ def calculate_historical_emotion_synergy(
     synergy_ratio = matching_likes / max(total_relevant_events, 1)
     final_synergy = float(np.clip(0.50 + 0.25 * synergy_ratio, 0.0, 1.0))
     return round(final_synergy, 4)
+
+
+def calculate_period_trends(
+    emotion_history: List[Dict[str, Any]],
+    period: str = "daily",
+) -> Dict[str, Any]:
+    """
+    Task 2: Daily, Weekly, and Monthly Emotional Trend Aggregation.
+    Aggregates historical emotion records by time period (daily, weekly, monthly) using actual timestamps.
+    Handles empty history, single check-ins, sparse records, and missing timestamps safely.
+    """
+    if not emotion_history:
+        return {
+            "period": period,
+            "period_data": [],
+            "total_periods": 0,
+            "mean_intensity": 0.0,
+            "dominant_period_emotion": "Neutral",
+        }
+
+    period_groups: Dict[str, List[Dict[str, Any]]] = {}
+
+    for idx, entry in enumerate(emotion_history):
+        ts_raw = entry.get("timestamp") or entry.get("date")
+        dt_obj = None
+        if ts_raw:
+            try:
+                dt_obj = datetime.fromisoformat(str(ts_raw).replace("Z", "+00:00"))
+            except Exception:
+                pass
+
+        if dt_obj is None:
+            period_key = f"Entry {idx + 1}"
+        else:
+            if period.lower() == "weekly":
+                year, week, _ = dt_obj.isocalendar()
+                period_key = f"{year}-W{week:02d}"
+            elif period.lower() == "monthly":
+                period_key = dt_obj.strftime("%Y-%m")
+            else:
+                period_key = dt_obj.strftime("%Y-%m-%d")
+
+        if period_key not in period_groups:
+            period_groups[period_key] = []
+        period_groups[period_key].append(entry)
+
+    period_summaries = []
+    overall_intensities = []
+
+    for p_key, entries in period_groups.items():
+        count = len(entries)
+        intensities = [float(e.get("intensity", 0.5)) for e in entries]
+        avg_int = float(np.mean(intensities)) if intensities else 0.0
+        overall_intensities.extend(intensities)
+
+        emo_counts: Dict[str, int] = {}
+        for e in entries:
+            dom = normalize_emotion_name(e.get("dominant_emotion", "Joy"))
+            emo_counts[dom] = emo_counts.get(dom, 0) + 1
+
+        top_emo = max(emo_counts.items(), key=lambda x: x[1])[0] if emo_counts else "Neutral"
+
+        period_summaries.append({
+            "period_key": p_key,
+            "checkin_count": count,
+            "mean_intensity": round(avg_int, 4),
+            "dominant_emotion": top_emo,
+            "emotion_breakdown": emo_counts,
+        })
+
+    overall_mean_int = float(np.mean(overall_intensities)) if overall_intensities else 0.0
+
+    return {
+        "period": period,
+        "period_data": period_summaries,
+        "total_periods": len(period_summaries),
+        "mean_intensity": round(overall_mean_int, 4),
+        "dominant_period_emotion": period_summaries[-1]["dominant_emotion"] if period_summaries else "Neutral",
+    }
