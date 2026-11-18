@@ -26148,7 +26148,7 @@
       "well_014",
       "well_013"
     ],
-    "interaction_count": 198,
+    "interaction_count": 202,
     "recent_emotions": [
       "Joy",
       "Joy",
@@ -27033,6 +27033,25 @@
       },
       {
         "timestamp": "2026-10-06T15:22:29.942170+00:00",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "positive_polarity": 0.9986,
+        "negative_polarity": 0.0006,
+        "final_emotional_state": "Very High-Intensity Joy",
+        "text_snippet": "I am feeling excited about the new project opportunities but slightly nervous ab",
+        "probabilities": {
+          "Joy": 0.9986,
+          "Sadness": 0.0002,
+          "Anger": 0.0003,
+          "Fear": 0.0007,
+          "Surprise": 0.0009,
+          "Disgust": 0.0001
+        },
+        "confidence": 0.9986,
+        "model_used": "distilbert"
+      },
+      {
+        "timestamp": "2026-10-08T15:35:53.190632+00:00",
         "dominant_emotion": "Joy",
         "intensity": 0.928,
         "positive_polarity": 0.9986,
@@ -30961,6 +30980,85 @@
           "self_efficacy",
           "wins",
           "empowerment"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_013",
+        "timestamp": "2026-10-08T15:36:09.053429+00:00",
+        "recommendation_score": 0.8418,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "journaling",
+        "tags": [
+          "joy_log",
+          "micro_moments",
+          "delight",
+          "optimism",
+          "daily_wins"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_020",
+        "timestamp": "2026-10-08T15:36:09.741037+00:00",
+        "recommendation_score": 0.6906,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "physical activity",
+        "tags": [
+          "yoga",
+          "vitality",
+          "energy",
+          "morning",
+          "movement"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_014",
+        "timestamp": "2026-10-08T15:36:10.473732+00:00",
+        "recommendation_score": 0.6747,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "music/audio activity",
+        "tags": [
+          "uplifting",
+          "acoustic",
+          "focus",
+          "motivation",
+          "positive_energy"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_009",
+        "timestamp": "2026-10-08T15:36:11.198349+00:00",
+        "recommendation_score": 0.6279,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "journaling",
+        "tags": [
+          "free_writing",
+          "venting",
+          "anger_management",
+          "clarity"
         ]
       }
     ]

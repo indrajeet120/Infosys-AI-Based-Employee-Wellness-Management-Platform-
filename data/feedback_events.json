@@ -56562,5 +56562,168 @@
       ],
       "final_score": 0.8651
     }
+  },
+  {
+    "id": "fb_aa5323f37a",
+    "user_id": "employee_01",
+    "recommendation_id": "well_013",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-10-08T15:36:08.588280+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 198
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Joyful Micro-Moments Log",
+      "tags": [
+        "joy_log",
+        "micro_moments",
+        "delight",
+        "optimism",
+        "daily_wins"
+      ],
+      "final_score": 0.8418
+    }
+  },
+  {
+    "id": "fb_acd149ce82",
+    "user_id": "employee_01",
+    "recommendation_id": "well_020",
+    "recommendation_type": "physical activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-10-08T15:36:09.293628+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 199
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Energizing Morning Sun Salutation",
+      "tags": [
+        "yoga",
+        "vitality",
+        "energy",
+        "morning",
+        "movement"
+      ],
+      "final_score": 0.6906
+    }
+  },
+  {
+    "id": "fb_bc136039a9",
+    "user_id": "employee_01",
+    "recommendation_id": "well_014",
+    "recommendation_type": "music/audio activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-10-08T15:36:10.022636+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 200
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Uplifting Acoustic Resonance Audio",
+      "tags": [
+        "uplifting",
+        "acoustic",
+        "focus",
+        "motivation",
+        "positive_energy"
+      ],
+      "final_score": 0.6747
+    }
+  },
+  {
+    "id": "fb_3bac57033a",
+    "user_id": "employee_01",
+    "recommendation_id": "well_009",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-10-08T15:36:10.757126+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 201
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Emotional Release Free-Writing",
+      "tags": [
+        "free_writing",
+        "venting",
+        "anger_management",
+        "clarity"
+      ],
+      "final_score": 0.6279
+    }
   }
 ]
