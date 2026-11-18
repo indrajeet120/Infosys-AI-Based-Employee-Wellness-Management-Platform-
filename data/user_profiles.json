@@ -12674,7 +12674,7 @@
     "liked_content": [],
     "disliked_content": [],
     "previously_selected_content": [],
-    "interaction_count": 245,
+    "interaction_count": 257,
     "recent_emotions": [],
     "emotion_history": [],
     "recommendation_history": [
@@ -17541,6 +17541,244 @@
           "wins",
           "empowerment"
         ]
+      },
+      {
+        "user_id": "bench_user_0",
+        "content_id": "well_002",
+        "timestamp": "2026-11-18T10:23:41.050042+00:00",
+        "recommendation_score": 0.8298,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Surprise",
+        "intensity": 0.5283,
+        "activity_type": "relaxation activity",
+        "tags": [
+          "grounding",
+          "mindfulness",
+          "panic",
+          "overwhelm",
+          "present_moment"
+        ]
+      },
+      {
+        "user_id": "bench_user_0",
+        "content_id": "well_001",
+        "timestamp": "2026-11-18T10:23:41.804757+00:00",
+        "recommendation_score": 0.8287,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Surprise",
+        "intensity": 0.5283,
+        "activity_type": "breathing exercise",
+        "tags": [
+          "calm",
+          "breath",
+          "slow",
+          "anxiety",
+          "panic",
+          "stress_relief"
+        ]
+      },
+      {
+        "user_id": "bench_user_0",
+        "content_id": "well_018",
+        "timestamp": "2026-11-18T10:23:42.421667+00:00",
+        "recommendation_score": 0.8184,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Surprise",
+        "intensity": 0.5283,
+        "activity_type": "breathing exercise",
+        "tags": [
+          "hydration",
+          "breath_pause",
+          "micro_break",
+          "quick_reset"
+        ]
+      },
+      {
+        "user_id": "bench_user_0",
+        "content_id": "well_013",
+        "timestamp": "2026-11-18T10:23:48.455837+00:00",
+        "recommendation_score": 0.9683,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.9267,
+        "activity_type": "journaling",
+        "tags": [
+          "joy_log",
+          "micro_moments",
+          "delight",
+          "optimism",
+          "daily_wins"
+        ]
+      },
+      {
+        "user_id": "bench_user_0",
+        "content_id": "well_005",
+        "timestamp": "2026-11-18T10:23:49.099420+00:00",
+        "recommendation_score": 0.8802,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.9267,
+        "activity_type": "positive reflection",
+        "tags": [
+          "gratitude",
+          "joy",
+          "celebration",
+          "happiness",
+          "positivity"
+        ]
+      },
+      {
+        "user_id": "bench_user_0",
+        "content_id": "well_019",
+        "timestamp": "2026-11-18T10:23:49.916057+00:00",
+        "recommendation_score": 0.8651,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.9267,
+        "activity_type": "positive reflection",
+        "tags": [
+          "strengths",
+          "self_efficacy",
+          "wins",
+          "empowerment"
+        ]
+      },
+      {
+        "user_id": "bench_user_0",
+        "content_id": "well_002",
+        "timestamp": "2026-11-18T10:23:56.576277+00:00",
+        "recommendation_score": 0.8298,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Surprise",
+        "intensity": 0.5283,
+        "activity_type": "relaxation activity",
+        "tags": [
+          "grounding",
+          "mindfulness",
+          "panic",
+          "overwhelm",
+          "present_moment"
+        ]
+      },
+      {
+        "user_id": "bench_user_0",
+        "content_id": "well_001",
+        "timestamp": "2026-11-18T10:23:57.402481+00:00",
+        "recommendation_score": 0.8287,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Surprise",
+        "intensity": 0.5283,
+        "activity_type": "breathing exercise",
+        "tags": [
+          "calm",
+          "breath",
+          "slow",
+          "anxiety",
+          "panic",
+          "stress_relief"
+        ]
+      },
+      {
+        "user_id": "bench_user_0",
+        "content_id": "well_018",
+        "timestamp": "2026-11-18T10:23:58.149150+00:00",
+        "recommendation_score": 0.8184,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Surprise",
+        "intensity": 0.5283,
+        "activity_type": "breathing exercise",
+        "tags": [
+          "hydration",
+          "breath_pause",
+          "micro_break",
+          "quick_reset"
+        ]
+      },
+      {
+        "user_id": "bench_user_0",
+        "content_id": "well_013",
+        "timestamp": "2026-11-18T10:24:03.905240+00:00",
+        "recommendation_score": 0.9683,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.9267,
+        "activity_type": "journaling",
+        "tags": [
+          "joy_log",
+          "micro_moments",
+          "delight",
+          "optimism",
+          "daily_wins"
+        ]
+      },
+      {
+        "user_id": "bench_user_0",
+        "content_id": "well_005",
+        "timestamp": "2026-11-18T10:24:04.676511+00:00",
+        "recommendation_score": 0.8802,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.9267,
+        "activity_type": "positive reflection",
+        "tags": [
+          "gratitude",
+          "joy",
+          "celebration",
+          "happiness",
+          "positivity"
+        ]
+      },
+      {
+        "user_id": "bench_user_0",
+        "content_id": "well_019",
+        "timestamp": "2026-11-18T10:24:05.524161+00:00",
+        "recommendation_score": 0.8651,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.9267,
+        "activity_type": "positive reflection",
+        "tags": [
+          "strengths",
+          "self_efficacy",
+          "wins",
+          "empowerment"
+        ]
       }
     ]
   },
@@ -17563,7 +17801,7 @@
     "liked_content": [],
     "disliked_content": [],
     "previously_selected_content": [],
-    "interaction_count": 222,
+    "interaction_count": 231,
     "recent_emotions": [],
     "emotion_history": [],
     "recommendation_history": [
@@ -21880,6 +22118,180 @@
           "perspective",
           "encouragement"
         ]
+      },
+      {
+        "user_id": "bench_user_1",
+        "content_id": "well_009",
+        "timestamp": "2026-11-18T10:23:43.173536+00:00",
+        "recommendation_score": 0.9304,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Anger",
+        "intensity": 0.907,
+        "activity_type": "journaling",
+        "tags": [
+          "free_writing",
+          "venting",
+          "anger_management",
+          "clarity"
+        ]
+      },
+      {
+        "user_id": "bench_user_1",
+        "content_id": "well_011",
+        "timestamp": "2026-11-18T10:23:43.682498+00:00",
+        "recommendation_score": 0.9162,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Anger",
+        "intensity": 0.907,
+        "activity_type": "breathing exercise",
+        "tags": [
+          "belly_breathing",
+          "parasympathetic",
+          "heart_rate",
+          "calm"
+        ]
+      },
+      {
+        "user_id": "bench_user_1",
+        "content_id": "well_022",
+        "timestamp": "2026-11-18T10:23:44.318869+00:00",
+        "recommendation_score": 0.9084,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Anger",
+        "intensity": 0.907,
+        "activity_type": "motivational content",
+        "tags": [
+          "audio_quotes",
+          "resilience",
+          "perspective",
+          "encouragement"
+        ]
+      },
+      {
+        "user_id": "bench_user_1",
+        "content_id": "well_002",
+        "timestamp": "2026-11-18T10:23:51.168960+00:00",
+        "recommendation_score": 0.8941,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Surprise",
+        "intensity": 0.6667,
+        "activity_type": "relaxation activity",
+        "tags": [
+          "grounding",
+          "mindfulness",
+          "panic",
+          "overwhelm",
+          "present_moment"
+        ]
+      },
+      {
+        "user_id": "bench_user_1",
+        "content_id": "well_001",
+        "timestamp": "2026-11-18T10:23:51.785036+00:00",
+        "recommendation_score": 0.8926,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Surprise",
+        "intensity": 0.6667,
+        "activity_type": "breathing exercise",
+        "tags": [
+          "calm",
+          "breath",
+          "slow",
+          "anxiety",
+          "panic",
+          "stress_relief"
+        ]
+      },
+      {
+        "user_id": "bench_user_1",
+        "content_id": "well_018",
+        "timestamp": "2026-11-18T10:23:52.558985+00:00",
+        "recommendation_score": 0.8856,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Surprise",
+        "intensity": 0.6667,
+        "activity_type": "breathing exercise",
+        "tags": [
+          "hydration",
+          "breath_pause",
+          "micro_break",
+          "quick_reset"
+        ]
+      },
+      {
+        "user_id": "bench_user_1",
+        "content_id": "well_009",
+        "timestamp": "2026-11-18T10:23:59.180919+00:00",
+        "recommendation_score": 0.9304,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Anger",
+        "intensity": 0.907,
+        "activity_type": "journaling",
+        "tags": [
+          "free_writing",
+          "venting",
+          "anger_management",
+          "clarity"
+        ]
+      },
+      {
+        "user_id": "bench_user_1",
+        "content_id": "well_011",
+        "timestamp": "2026-11-18T10:23:59.770678+00:00",
+        "recommendation_score": 0.9162,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Anger",
+        "intensity": 0.907,
+        "activity_type": "breathing exercise",
+        "tags": [
+          "belly_breathing",
+          "parasympathetic",
+          "heart_rate",
+          "calm"
+        ]
+      },
+      {
+        "user_id": "bench_user_1",
+        "content_id": "well_022",
+        "timestamp": "2026-11-18T10:24:00.408584+00:00",
+        "recommendation_score": 0.9084,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Anger",
+        "intensity": 0.907,
+        "activity_type": "motivational content",
+        "tags": [
+          "audio_quotes",
+          "resilience",
+          "perspective",
+          "encouragement"
+        ]
       }
     ]
   },
@@ -21902,7 +22314,7 @@
     "liked_content": [],
     "disliked_content": [],
     "previously_selected_content": [],
-    "interaction_count": 213,
+    "interaction_count": 222,
     "recent_emotions": [],
     "emotion_history": [],
     "recommendation_history": [
@@ -26093,6 +26505,183 @@
           "self_care",
           "healing"
         ]
+      },
+      {
+        "user_id": "bench_user_2",
+        "content_id": "well_022",
+        "timestamp": "2026-11-18T10:23:45.628388+00:00",
+        "recommendation_score": 0.9242,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Sadness",
+        "intensity": 0.9008,
+        "activity_type": "motivational content",
+        "tags": [
+          "audio_quotes",
+          "resilience",
+          "perspective",
+          "encouragement"
+        ]
+      },
+      {
+        "user_id": "bench_user_2",
+        "content_id": "well_002",
+        "timestamp": "2026-11-18T10:23:46.302461+00:00",
+        "recommendation_score": 0.9093,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Sadness",
+        "intensity": 0.9008,
+        "activity_type": "relaxation activity",
+        "tags": [
+          "grounding",
+          "mindfulness",
+          "panic",
+          "overwhelm",
+          "present_moment"
+        ]
+      },
+      {
+        "user_id": "bench_user_2",
+        "content_id": "well_003",
+        "timestamp": "2026-11-18T10:23:47.043669+00:00",
+        "recommendation_score": 0.8847,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Sadness",
+        "intensity": 0.9008,
+        "activity_type": "journaling",
+        "tags": [
+          "reflection",
+          "journal",
+          "sadness",
+          "self_care",
+          "healing"
+        ]
+      },
+      {
+        "user_id": "bench_user_2",
+        "content_id": "well_022",
+        "timestamp": "2026-11-18T10:23:53.924639+00:00",
+        "recommendation_score": 0.8799,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Sadness",
+        "intensity": 0.7292,
+        "activity_type": "motivational content",
+        "tags": [
+          "audio_quotes",
+          "resilience",
+          "perspective",
+          "encouragement"
+        ]
+      },
+      {
+        "user_id": "bench_user_2",
+        "content_id": "well_002",
+        "timestamp": "2026-11-18T10:23:54.551157+00:00",
+        "recommendation_score": 0.8651,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Sadness",
+        "intensity": 0.7292,
+        "activity_type": "relaxation activity",
+        "tags": [
+          "grounding",
+          "mindfulness",
+          "panic",
+          "overwhelm",
+          "present_moment"
+        ]
+      },
+      {
+        "user_id": "bench_user_2",
+        "content_id": "well_003",
+        "timestamp": "2026-11-18T10:23:55.285963+00:00",
+        "recommendation_score": 0.8345,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Sadness",
+        "intensity": 0.7292,
+        "activity_type": "journaling",
+        "tags": [
+          "reflection",
+          "journal",
+          "sadness",
+          "self_care",
+          "healing"
+        ]
+      },
+      {
+        "user_id": "bench_user_2",
+        "content_id": "well_022",
+        "timestamp": "2026-11-18T10:24:01.469903+00:00",
+        "recommendation_score": 0.9242,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Sadness",
+        "intensity": 0.9008,
+        "activity_type": "motivational content",
+        "tags": [
+          "audio_quotes",
+          "resilience",
+          "perspective",
+          "encouragement"
+        ]
+      },
+      {
+        "user_id": "bench_user_2",
+        "content_id": "well_002",
+        "timestamp": "2026-11-18T10:24:02.172943+00:00",
+        "recommendation_score": 0.9093,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Sadness",
+        "intensity": 0.9008,
+        "activity_type": "relaxation activity",
+        "tags": [
+          "grounding",
+          "mindfulness",
+          "panic",
+          "overwhelm",
+          "present_moment"
+        ]
+      },
+      {
+        "user_id": "bench_user_2",
+        "content_id": "well_003",
+        "timestamp": "2026-11-18T10:24:02.774960+00:00",
+        "recommendation_score": 0.8847,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Sadness",
+        "intensity": 0.9008,
+        "activity_type": "journaling",
+        "tags": [
+          "reflection",
+          "journal",
+          "sadness",
+          "self_care",
+          "healing"
+        ]
       }
     ]
   },
@@ -26148,7 +26737,7 @@
       "well_014",
       "well_013"
     ],
-    "interaction_count": 202,
+    "interaction_count": 219,
     "recent_emotions": [
       "Joy",
       "Joy",
@@ -27052,6 +27641,82 @@
       },
       {
         "timestamp": "2026-10-08T15:35:53.190632+00:00",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "positive_polarity": 0.9986,
+        "negative_polarity": 0.0006,
+        "final_emotional_state": "Very High-Intensity Joy",
+        "text_snippet": "I am feeling excited about the new project opportunities but slightly nervous ab",
+        "probabilities": {
+          "Joy": 0.9986,
+          "Sadness": 0.0002,
+          "Anger": 0.0003,
+          "Fear": 0.0007,
+          "Surprise": 0.0009,
+          "Disgust": 0.0001
+        },
+        "confidence": 0.9986,
+        "model_used": "distilbert"
+      },
+      {
+        "timestamp": "2026-11-18T10:21:09.987609+00:00",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "positive_polarity": 0.9986,
+        "negative_polarity": 0.0006,
+        "final_emotional_state": "Very High-Intensity Joy",
+        "text_snippet": "I am feeling excited about the new project opportunities but slightly nervous ab",
+        "probabilities": {
+          "Joy": 0.9986,
+          "Sadness": 0.0002,
+          "Anger": 0.0003,
+          "Fear": 0.0007,
+          "Surprise": 0.0009,
+          "Disgust": 0.0001
+        },
+        "confidence": 0.9986,
+        "model_used": "distilbert"
+      },
+      {
+        "timestamp": "2026-11-18T10:21:48.174184+00:00",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "positive_polarity": 0.9986,
+        "negative_polarity": 0.0006,
+        "final_emotional_state": "Very High-Intensity Joy",
+        "text_snippet": "I am feeling excited about the new project opportunities but slightly nervous ab",
+        "probabilities": {
+          "Joy": 0.9986,
+          "Sadness": 0.0002,
+          "Anger": 0.0003,
+          "Fear": 0.0007,
+          "Surprise": 0.0009,
+          "Disgust": 0.0001
+        },
+        "confidence": 0.9986,
+        "model_used": "distilbert"
+      },
+      {
+        "timestamp": "2026-11-18T10:52:11.858882+00:00",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "positive_polarity": 0.9986,
+        "negative_polarity": 0.0006,
+        "final_emotional_state": "Very High-Intensity Joy",
+        "text_snippet": "I am feeling excited about the new project opportunities but slightly nervous ab",
+        "probabilities": {
+          "Joy": 0.9986,
+          "Sadness": 0.0002,
+          "Anger": 0.0003,
+          "Fear": 0.0007,
+          "Surprise": 0.0009,
+          "Disgust": 0.0001
+        },
+        "confidence": 0.9986,
+        "model_used": "distilbert"
+      },
+      {
+        "timestamp": "2026-11-18T10:54:23.472012+00:00",
         "dominant_emotion": "Joy",
         "intensity": 0.928,
         "positive_polarity": 0.9986,
@@ -31059,6 +31724,341 @@
           "venting",
           "anger_management",
           "clarity"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_013",
+        "timestamp": "2026-11-18T10:21:27.956409+00:00",
+        "recommendation_score": 0.8418,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "journaling",
+        "tags": [
+          "joy_log",
+          "micro_moments",
+          "delight",
+          "optimism",
+          "daily_wins"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_020",
+        "timestamp": "2026-11-18T10:21:28.570359+00:00",
+        "recommendation_score": 0.6906,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "physical activity",
+        "tags": [
+          "yoga",
+          "vitality",
+          "energy",
+          "morning",
+          "movement"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_014",
+        "timestamp": "2026-11-18T10:21:29.171523+00:00",
+        "recommendation_score": 0.6747,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "music/audio activity",
+        "tags": [
+          "uplifting",
+          "acoustic",
+          "focus",
+          "motivation",
+          "positive_energy"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_009",
+        "timestamp": "2026-11-18T10:21:29.762702+00:00",
+        "recommendation_score": 0.6279,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "journaling",
+        "tags": [
+          "free_writing",
+          "venting",
+          "anger_management",
+          "clarity"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_013",
+        "timestamp": "2026-11-18T10:21:49.148764+00:00",
+        "recommendation_score": 0.8418,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "journaling",
+        "tags": [
+          "joy_log",
+          "micro_moments",
+          "delight",
+          "optimism",
+          "daily_wins"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_020",
+        "timestamp": "2026-11-18T10:21:49.866413+00:00",
+        "recommendation_score": 0.6906,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "physical activity",
+        "tags": [
+          "yoga",
+          "vitality",
+          "energy",
+          "morning",
+          "movement"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_014",
+        "timestamp": "2026-11-18T10:21:50.537086+00:00",
+        "recommendation_score": 0.6747,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "music/audio activity",
+        "tags": [
+          "uplifting",
+          "acoustic",
+          "focus",
+          "motivation",
+          "positive_energy"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_009",
+        "timestamp": "2026-11-18T10:21:51.390884+00:00",
+        "recommendation_score": 0.6278,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "journaling",
+        "tags": [
+          "free_writing",
+          "venting",
+          "anger_management",
+          "clarity"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_013",
+        "timestamp": "2026-11-18T10:52:12.600760+00:00",
+        "recommendation_score": 0.8418,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "journaling",
+        "tags": [
+          "joy_log",
+          "micro_moments",
+          "delight",
+          "optimism",
+          "daily_wins"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_020",
+        "timestamp": "2026-11-18T10:52:13.210519+00:00",
+        "recommendation_score": 0.6906,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "physical activity",
+        "tags": [
+          "yoga",
+          "vitality",
+          "energy",
+          "morning",
+          "movement"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_014",
+        "timestamp": "2026-11-18T10:52:13.915735+00:00",
+        "recommendation_score": 0.6747,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "music/audio activity",
+        "tags": [
+          "uplifting",
+          "acoustic",
+          "focus",
+          "motivation",
+          "positive_energy"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_009",
+        "timestamp": "2026-11-18T10:52:14.500290+00:00",
+        "recommendation_score": 0.6278,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "journaling",
+        "tags": [
+          "free_writing",
+          "venting",
+          "anger_management",
+          "clarity"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_013",
+        "timestamp": "2026-11-18T10:54:39.648907+00:00",
+        "recommendation_score": 0.9756,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "journaling",
+        "tags": [
+          "joy_log",
+          "micro_moments",
+          "delight",
+          "optimism",
+          "daily_wins"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_020",
+        "timestamp": "2026-11-18T10:54:39.871658+00:00",
+        "recommendation_score": 0.801,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "physical activity",
+        "tags": [
+          "yoga",
+          "vitality",
+          "energy",
+          "morning",
+          "movement"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_014",
+        "timestamp": "2026-11-18T10:54:40.099718+00:00",
+        "recommendation_score": 0.7868,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "music/audio activity",
+        "tags": [
+          "uplifting",
+          "acoustic",
+          "focus",
+          "motivation",
+          "positive_energy"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_009",
+        "timestamp": "2026-11-18T10:54:40.321560+00:00",
+        "recommendation_score": 0.7099,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "journaling",
+        "tags": [
+          "free_writing",
+          "venting",
+          "anger_management",
+          "clarity"
+        ]
+      },
+      {
+        "user_id": "employee_01",
+        "content_id": "well_022",
+        "timestamp": "2026-11-18T10:54:40.559552+00:00",
+        "recommendation_score": 0.672,
+        "was_selected": false,
+        "was_liked": false,
+        "was_disliked": false,
+        "feedback": "viewed",
+        "dominant_emotion": "Joy",
+        "intensity": 0.928,
+        "activity_type": "motivational content",
+        "tags": [
+          "audio_quotes",
+          "resilience",
+          "perspective",
+          "encouragement"
         ]
       }
     ]

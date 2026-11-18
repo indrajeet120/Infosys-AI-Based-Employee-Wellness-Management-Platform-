@@ -56725,5 +56725,1916 @@
       ],
       "final_score": 0.6279
     }
+  },
+  {
+    "id": "fb_3c992302a2",
+    "user_id": "employee_01",
+    "recommendation_id": "well_013",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:21:27.572979+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 202
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Joyful Micro-Moments Log",
+      "tags": [
+        "joy_log",
+        "micro_moments",
+        "delight",
+        "optimism",
+        "daily_wins"
+      ],
+      "final_score": 0.8418
+    }
+  },
+  {
+    "id": "fb_da60cd89ae",
+    "user_id": "employee_01",
+    "recommendation_id": "well_020",
+    "recommendation_type": "physical activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:21:28.199417+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 203
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Energizing Morning Sun Salutation",
+      "tags": [
+        "yoga",
+        "vitality",
+        "energy",
+        "morning",
+        "movement"
+      ],
+      "final_score": 0.6906
+    }
+  },
+  {
+    "id": "fb_f29f3e7981",
+    "user_id": "employee_01",
+    "recommendation_id": "well_014",
+    "recommendation_type": "music/audio activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:21:28.806828+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 204
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Uplifting Acoustic Resonance Audio",
+      "tags": [
+        "uplifting",
+        "acoustic",
+        "focus",
+        "motivation",
+        "positive_energy"
+      ],
+      "final_score": 0.6747
+    }
+  },
+  {
+    "id": "fb_12e46bb76b",
+    "user_id": "employee_01",
+    "recommendation_id": "well_009",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:21:29.419402+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 205
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Emotional Release Free-Writing",
+      "tags": [
+        "free_writing",
+        "venting",
+        "anger_management",
+        "clarity"
+      ],
+      "final_score": 0.6279
+    }
+  },
+  {
+    "id": "fb_253841fce1",
+    "user_id": "employee_01",
+    "recommendation_id": "well_013",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:21:48.653531+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 206
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Joyful Micro-Moments Log",
+      "tags": [
+        "joy_log",
+        "micro_moments",
+        "delight",
+        "optimism",
+        "daily_wins"
+      ],
+      "final_score": 0.8418
+    }
+  },
+  {
+    "id": "fb_4e73c45393",
+    "user_id": "employee_01",
+    "recommendation_id": "well_020",
+    "recommendation_type": "physical activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:21:49.526318+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 207
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Energizing Morning Sun Salutation",
+      "tags": [
+        "yoga",
+        "vitality",
+        "energy",
+        "morning",
+        "movement"
+      ],
+      "final_score": 0.6906
+    }
+  },
+  {
+    "id": "fb_c23c6e91b5",
+    "user_id": "employee_01",
+    "recommendation_id": "well_014",
+    "recommendation_type": "music/audio activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:21:50.107820+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 208
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Uplifting Acoustic Resonance Audio",
+      "tags": [
+        "uplifting",
+        "acoustic",
+        "focus",
+        "motivation",
+        "positive_energy"
+      ],
+      "final_score": 0.6747
+    }
+  },
+  {
+    "id": "fb_593b370c09",
+    "user_id": "employee_01",
+    "recommendation_id": "well_009",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:21:50.825690+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 209
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Emotional Release Free-Writing",
+      "tags": [
+        "free_writing",
+        "venting",
+        "anger_management",
+        "clarity"
+      ],
+      "final_score": 0.6278
+    }
+  },
+  {
+    "id": "fb_19e939999a",
+    "user_id": "bench_user_0",
+    "recommendation_id": "well_002",
+    "recommendation_type": "relaxation activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:40.617231+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 245
+    },
+    "emotion_at_recommendation": "Surprise",
+    "emotion_intensity": 0.5283,
+    "interaction_metadata": {
+      "title": "Mindful Grounding 5-4-3-2-1 Technique",
+      "tags": [
+        "grounding",
+        "mindfulness",
+        "panic",
+        "overwhelm",
+        "present_moment"
+      ],
+      "final_score": 0.8298
+    }
+  },
+  {
+    "id": "fb_1767ff652f",
+    "user_id": "bench_user_0",
+    "recommendation_id": "well_001",
+    "recommendation_type": "breathing exercise",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:41.292745+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 246
+    },
+    "emotion_at_recommendation": "Surprise",
+    "emotion_intensity": 0.5283,
+    "interaction_metadata": {
+      "title": "4-7-8 Deep Box Breathing",
+      "tags": [
+        "calm",
+        "breath",
+        "slow",
+        "anxiety",
+        "panic",
+        "stress_relief"
+      ],
+      "final_score": 0.8287
+    }
+  },
+  {
+    "id": "fb_3dd9c76f33",
+    "user_id": "bench_user_0",
+    "recommendation_id": "well_018",
+    "recommendation_type": "breathing exercise",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:42.077252+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 247
+    },
+    "emotion_at_recommendation": "Surprise",
+    "emotion_intensity": 0.5283,
+    "interaction_metadata": {
+      "title": "Hydration & Mindful Breath Pause",
+      "tags": [
+        "hydration",
+        "breath_pause",
+        "micro_break",
+        "quick_reset"
+      ],
+      "final_score": 0.8184
+    }
+  },
+  {
+    "id": "fb_da609533aa",
+    "user_id": "bench_user_1",
+    "recommendation_id": "well_009",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:42.816019+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 222
+    },
+    "emotion_at_recommendation": "Anger",
+    "emotion_intensity": 0.907,
+    "interaction_metadata": {
+      "title": "Emotional Release Free-Writing",
+      "tags": [
+        "free_writing",
+        "venting",
+        "anger_management",
+        "clarity"
+      ],
+      "final_score": 0.9304
+    }
+  },
+  {
+    "id": "fb_a8120ee501",
+    "user_id": "bench_user_1",
+    "recommendation_id": "well_011",
+    "recommendation_type": "breathing exercise",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:43.363827+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 223
+    },
+    "emotion_at_recommendation": "Anger",
+    "emotion_intensity": 0.907,
+    "interaction_metadata": {
+      "title": "Diaphragmatic Belly Breathing",
+      "tags": [
+        "belly_breathing",
+        "parasympathetic",
+        "heart_rate",
+        "calm"
+      ],
+      "final_score": 0.9162
+    }
+  },
+  {
+    "id": "fb_53cac1dcd8",
+    "user_id": "bench_user_1",
+    "recommendation_id": "well_022",
+    "recommendation_type": "motivational content",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:43.952773+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 224
+    },
+    "emotion_at_recommendation": "Anger",
+    "emotion_intensity": 0.907,
+    "interaction_metadata": {
+      "title": "Inspirational Resilience Audio Bites",
+      "tags": [
+        "audio_quotes",
+        "resilience",
+        "perspective",
+        "encouragement"
+      ],
+      "final_score": 0.9084
+    }
+  },
+  {
+    "id": "fb_7480321619",
+    "user_id": "bench_user_2",
+    "recommendation_id": "well_022",
+    "recommendation_type": "motivational content",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:45.178525+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 213
+    },
+    "emotion_at_recommendation": "Sadness",
+    "emotion_intensity": 0.9008,
+    "interaction_metadata": {
+      "title": "Inspirational Resilience Audio Bites",
+      "tags": [
+        "audio_quotes",
+        "resilience",
+        "perspective",
+        "encouragement"
+      ],
+      "final_score": 0.9242
+    }
+  },
+  {
+    "id": "fb_f73ccc756d",
+    "user_id": "bench_user_2",
+    "recommendation_id": "well_002",
+    "recommendation_type": "relaxation activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:45.885741+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 214
+    },
+    "emotion_at_recommendation": "Sadness",
+    "emotion_intensity": 0.9008,
+    "interaction_metadata": {
+      "title": "Mindful Grounding 5-4-3-2-1 Technique",
+      "tags": [
+        "grounding",
+        "mindfulness",
+        "panic",
+        "overwhelm",
+        "present_moment"
+      ],
+      "final_score": 0.9093
+    }
+  },
+  {
+    "id": "fb_52238537e7",
+    "user_id": "bench_user_2",
+    "recommendation_id": "well_003",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:46.540872+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 215
+    },
+    "emotion_at_recommendation": "Sadness",
+    "emotion_intensity": 0.9008,
+    "interaction_metadata": {
+      "title": "Compassionate Self-Reflection Journal",
+      "tags": [
+        "reflection",
+        "journal",
+        "sadness",
+        "self_care",
+        "healing"
+      ],
+      "final_score": 0.8847
+    }
+  },
+  {
+    "id": "fb_0d33d0ccca",
+    "user_id": "bench_user_0",
+    "recommendation_id": "well_013",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:48.016708+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 248
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.9267,
+    "interaction_metadata": {
+      "title": "Joyful Micro-Moments Log",
+      "tags": [
+        "joy_log",
+        "micro_moments",
+        "delight",
+        "optimism",
+        "daily_wins"
+      ],
+      "final_score": 0.9683
+    }
+  },
+  {
+    "id": "fb_aaa9af6ea4",
+    "user_id": "bench_user_0",
+    "recommendation_id": "well_005",
+    "recommendation_type": "positive reflection",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:48.740405+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 249
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.9267,
+    "interaction_metadata": {
+      "title": "Joy Savoring and Gratitude Anchor",
+      "tags": [
+        "gratitude",
+        "joy",
+        "celebration",
+        "happiness",
+        "positivity"
+      ],
+      "final_score": 0.8802
+    }
+  },
+  {
+    "id": "fb_3a295b56ea",
+    "user_id": "bench_user_0",
+    "recommendation_id": "well_019",
+    "recommendation_type": "positive reflection",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:49.389585+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 250
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.9267,
+    "interaction_metadata": {
+      "title": "Daily Wins & Strengths Inventory",
+      "tags": [
+        "strengths",
+        "self_efficacy",
+        "wins",
+        "empowerment"
+      ],
+      "final_score": 0.8651
+    }
+  },
+  {
+    "id": "fb_60d6d9152a",
+    "user_id": "bench_user_1",
+    "recommendation_id": "well_002",
+    "recommendation_type": "relaxation activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:50.748357+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 225
+    },
+    "emotion_at_recommendation": "Surprise",
+    "emotion_intensity": 0.6667,
+    "interaction_metadata": {
+      "title": "Mindful Grounding 5-4-3-2-1 Technique",
+      "tags": [
+        "grounding",
+        "mindfulness",
+        "panic",
+        "overwhelm",
+        "present_moment"
+      ],
+      "final_score": 0.8941
+    }
+  },
+  {
+    "id": "fb_f024d70fef",
+    "user_id": "bench_user_1",
+    "recommendation_id": "well_001",
+    "recommendation_type": "breathing exercise",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:51.437108+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 226
+    },
+    "emotion_at_recommendation": "Surprise",
+    "emotion_intensity": 0.6667,
+    "interaction_metadata": {
+      "title": "4-7-8 Deep Box Breathing",
+      "tags": [
+        "calm",
+        "breath",
+        "slow",
+        "anxiety",
+        "panic",
+        "stress_relief"
+      ],
+      "final_score": 0.8926
+    }
+  },
+  {
+    "id": "fb_0567947cc9",
+    "user_id": "bench_user_1",
+    "recommendation_id": "well_018",
+    "recommendation_type": "breathing exercise",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:52.120401+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 227
+    },
+    "emotion_at_recommendation": "Surprise",
+    "emotion_intensity": 0.6667,
+    "interaction_metadata": {
+      "title": "Hydration & Mindful Breath Pause",
+      "tags": [
+        "hydration",
+        "breath_pause",
+        "micro_break",
+        "quick_reset"
+      ],
+      "final_score": 0.8856
+    }
+  },
+  {
+    "id": "fb_4af100d53d",
+    "user_id": "bench_user_2",
+    "recommendation_id": "well_022",
+    "recommendation_type": "motivational content",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:53.408223+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 216
+    },
+    "emotion_at_recommendation": "Sadness",
+    "emotion_intensity": 0.7292,
+    "interaction_metadata": {
+      "title": "Inspirational Resilience Audio Bites",
+      "tags": [
+        "audio_quotes",
+        "resilience",
+        "perspective",
+        "encouragement"
+      ],
+      "final_score": 0.8799
+    }
+  },
+  {
+    "id": "fb_8abd425417",
+    "user_id": "bench_user_2",
+    "recommendation_id": "well_002",
+    "recommendation_type": "relaxation activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:54.171048+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 217
+    },
+    "emotion_at_recommendation": "Sadness",
+    "emotion_intensity": 0.7292,
+    "interaction_metadata": {
+      "title": "Mindful Grounding 5-4-3-2-1 Technique",
+      "tags": [
+        "grounding",
+        "mindfulness",
+        "panic",
+        "overwhelm",
+        "present_moment"
+      ],
+      "final_score": 0.8651
+    }
+  },
+  {
+    "id": "fb_efb45cd17e",
+    "user_id": "bench_user_2",
+    "recommendation_id": "well_003",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:54.877233+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 218
+    },
+    "emotion_at_recommendation": "Sadness",
+    "emotion_intensity": 0.7292,
+    "interaction_metadata": {
+      "title": "Compassionate Self-Reflection Journal",
+      "tags": [
+        "reflection",
+        "journal",
+        "sadness",
+        "self_care",
+        "healing"
+      ],
+      "final_score": 0.8345
+    }
+  },
+  {
+    "id": "fb_1693c89789",
+    "user_id": "bench_user_0",
+    "recommendation_id": "well_002",
+    "recommendation_type": "relaxation activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:56.087605+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 251
+    },
+    "emotion_at_recommendation": "Surprise",
+    "emotion_intensity": 0.5283,
+    "interaction_metadata": {
+      "title": "Mindful Grounding 5-4-3-2-1 Technique",
+      "tags": [
+        "grounding",
+        "mindfulness",
+        "panic",
+        "overwhelm",
+        "present_moment"
+      ],
+      "final_score": 0.8298
+    }
+  },
+  {
+    "id": "fb_a811c1fe1a",
+    "user_id": "bench_user_0",
+    "recommendation_id": "well_001",
+    "recommendation_type": "breathing exercise",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:56.825926+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 252
+    },
+    "emotion_at_recommendation": "Surprise",
+    "emotion_intensity": 0.5283,
+    "interaction_metadata": {
+      "title": "4-7-8 Deep Box Breathing",
+      "tags": [
+        "calm",
+        "breath",
+        "slow",
+        "anxiety",
+        "panic",
+        "stress_relief"
+      ],
+      "final_score": 0.8287
+    }
+  },
+  {
+    "id": "fb_0d1f22109c",
+    "user_id": "bench_user_0",
+    "recommendation_id": "well_018",
+    "recommendation_type": "breathing exercise",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:57.706808+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 253
+    },
+    "emotion_at_recommendation": "Surprise",
+    "emotion_intensity": 0.5283,
+    "interaction_metadata": {
+      "title": "Hydration & Mindful Breath Pause",
+      "tags": [
+        "hydration",
+        "breath_pause",
+        "micro_break",
+        "quick_reset"
+      ],
+      "final_score": 0.8184
+    }
+  },
+  {
+    "id": "fb_8161adb68d",
+    "user_id": "bench_user_1",
+    "recommendation_id": "well_009",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:58.797219+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 228
+    },
+    "emotion_at_recommendation": "Anger",
+    "emotion_intensity": 0.907,
+    "interaction_metadata": {
+      "title": "Emotional Release Free-Writing",
+      "tags": [
+        "free_writing",
+        "venting",
+        "anger_management",
+        "clarity"
+      ],
+      "final_score": 0.9304
+    }
+  },
+  {
+    "id": "fb_ba6b636a62",
+    "user_id": "bench_user_1",
+    "recommendation_id": "well_011",
+    "recommendation_type": "breathing exercise",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:23:59.425915+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 229
+    },
+    "emotion_at_recommendation": "Anger",
+    "emotion_intensity": 0.907,
+    "interaction_metadata": {
+      "title": "Diaphragmatic Belly Breathing",
+      "tags": [
+        "belly_breathing",
+        "parasympathetic",
+        "heart_rate",
+        "calm"
+      ],
+      "final_score": 0.9162
+    }
+  },
+  {
+    "id": "fb_17a8425a30",
+    "user_id": "bench_user_1",
+    "recommendation_id": "well_022",
+    "recommendation_type": "motivational content",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:24:00.027898+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 230
+    },
+    "emotion_at_recommendation": "Anger",
+    "emotion_intensity": 0.907,
+    "interaction_metadata": {
+      "title": "Inspirational Resilience Audio Bites",
+      "tags": [
+        "audio_quotes",
+        "resilience",
+        "perspective",
+        "encouragement"
+      ],
+      "final_score": 0.9084
+    }
+  },
+  {
+    "id": "fb_2298c0a995",
+    "user_id": "bench_user_2",
+    "recommendation_id": "well_022",
+    "recommendation_type": "motivational content",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:24:01.082595+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 219
+    },
+    "emotion_at_recommendation": "Sadness",
+    "emotion_intensity": 0.9008,
+    "interaction_metadata": {
+      "title": "Inspirational Resilience Audio Bites",
+      "tags": [
+        "audio_quotes",
+        "resilience",
+        "perspective",
+        "encouragement"
+      ],
+      "final_score": 0.9242
+    }
+  },
+  {
+    "id": "fb_4fcb6d5354",
+    "user_id": "bench_user_2",
+    "recommendation_id": "well_002",
+    "recommendation_type": "relaxation activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:24:01.726748+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 220
+    },
+    "emotion_at_recommendation": "Sadness",
+    "emotion_intensity": 0.9008,
+    "interaction_metadata": {
+      "title": "Mindful Grounding 5-4-3-2-1 Technique",
+      "tags": [
+        "grounding",
+        "mindfulness",
+        "panic",
+        "overwhelm",
+        "present_moment"
+      ],
+      "final_score": 0.9093
+    }
+  },
+  {
+    "id": "fb_2cef17b443",
+    "user_id": "bench_user_2",
+    "recommendation_id": "well_003",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:24:02.401882+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 221
+    },
+    "emotion_at_recommendation": "Sadness",
+    "emotion_intensity": 0.9008,
+    "interaction_metadata": {
+      "title": "Compassionate Self-Reflection Journal",
+      "tags": [
+        "reflection",
+        "journal",
+        "sadness",
+        "self_care",
+        "healing"
+      ],
+      "final_score": 0.8847
+    }
+  },
+  {
+    "id": "fb_5b3035e216",
+    "user_id": "bench_user_0",
+    "recommendation_id": "well_013",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:24:03.419432+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 254
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.9267,
+    "interaction_metadata": {
+      "title": "Joyful Micro-Moments Log",
+      "tags": [
+        "joy_log",
+        "micro_moments",
+        "delight",
+        "optimism",
+        "daily_wins"
+      ],
+      "final_score": 0.9683
+    }
+  },
+  {
+    "id": "fb_50bf41c404",
+    "user_id": "bench_user_0",
+    "recommendation_id": "well_005",
+    "recommendation_type": "positive reflection",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:24:04.133577+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 255
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.9267,
+    "interaction_metadata": {
+      "title": "Joy Savoring and Gratitude Anchor",
+      "tags": [
+        "gratitude",
+        "joy",
+        "celebration",
+        "happiness",
+        "positivity"
+      ],
+      "final_score": 0.8802
+    }
+  },
+  {
+    "id": "fb_6470223990",
+    "user_id": "bench_user_0",
+    "recommendation_id": "well_019",
+    "recommendation_type": "positive reflection",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:24:05.071389+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "English",
+      "interaction_count": 256
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.9267,
+    "interaction_metadata": {
+      "title": "Daily Wins & Strengths Inventory",
+      "tags": [
+        "strengths",
+        "self_efficacy",
+        "wins",
+        "empowerment"
+      ],
+      "final_score": 0.8651
+    }
+  },
+  {
+    "id": "fb_14c62840a0",
+    "user_id": "employee_01",
+    "recommendation_id": "well_013",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:52:12.198561+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 210
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Joyful Micro-Moments Log",
+      "tags": [
+        "joy_log",
+        "micro_moments",
+        "delight",
+        "optimism",
+        "daily_wins"
+      ],
+      "final_score": 0.8418
+    }
+  },
+  {
+    "id": "fb_9b0268de91",
+    "user_id": "employee_01",
+    "recommendation_id": "well_020",
+    "recommendation_type": "physical activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:52:12.837907+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 211
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Energizing Morning Sun Salutation",
+      "tags": [
+        "yoga",
+        "vitality",
+        "energy",
+        "morning",
+        "movement"
+      ],
+      "final_score": 0.6906
+    }
+  },
+  {
+    "id": "fb_4dfda107e3",
+    "user_id": "employee_01",
+    "recommendation_id": "well_014",
+    "recommendation_type": "music/audio activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:52:13.472593+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 212
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Uplifting Acoustic Resonance Audio",
+      "tags": [
+        "uplifting",
+        "acoustic",
+        "focus",
+        "motivation",
+        "positive_energy"
+      ],
+      "final_score": 0.6747
+    }
+  },
+  {
+    "id": "fb_654659842d",
+    "user_id": "employee_01",
+    "recommendation_id": "well_009",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:52:14.167427+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 213
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Emotional Release Free-Writing",
+      "tags": [
+        "free_writing",
+        "venting",
+        "anger_management",
+        "clarity"
+      ],
+      "final_score": 0.6278
+    }
+  },
+  {
+    "id": "fb_81c6e5cf1d",
+    "user_id": "employee_01",
+    "recommendation_id": "well_013",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:54:39.474981+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 214
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Joyful Micro-Moments Log",
+      "tags": [
+        "joy_log",
+        "micro_moments",
+        "delight",
+        "optimism",
+        "daily_wins"
+      ],
+      "final_score": 0.9756
+    }
+  },
+  {
+    "id": "fb_c801b5c4d9",
+    "user_id": "employee_01",
+    "recommendation_id": "well_020",
+    "recommendation_type": "physical activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:54:39.743534+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 215
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Energizing Morning Sun Salutation",
+      "tags": [
+        "yoga",
+        "vitality",
+        "energy",
+        "morning",
+        "movement"
+      ],
+      "final_score": 0.801
+    }
+  },
+  {
+    "id": "fb_6ae1b74c64",
+    "user_id": "employee_01",
+    "recommendation_id": "well_014",
+    "recommendation_type": "music/audio activity",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:54:39.963865+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 216
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Uplifting Acoustic Resonance Audio",
+      "tags": [
+        "uplifting",
+        "acoustic",
+        "focus",
+        "motivation",
+        "positive_energy"
+      ],
+      "final_score": 0.7868
+    }
+  },
+  {
+    "id": "fb_142f6df18c",
+    "user_id": "employee_01",
+    "recommendation_id": "well_009",
+    "recommendation_type": "journaling",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:54:40.190263+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 217
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Emotional Release Free-Writing",
+      "tags": [
+        "free_writing",
+        "venting",
+        "anger_management",
+        "clarity"
+      ],
+      "final_score": 0.7099
+    }
+  },
+  {
+    "id": "fb_e323a28871",
+    "user_id": "employee_01",
+    "recommendation_id": "well_022",
+    "recommendation_type": "motivational content",
+    "viewed": true,
+    "accepted": false,
+    "rejected": false,
+    "rating": null,
+    "feedback_timestamp": "2026-11-18T10:54:40.420712+00:00",
+    "preference_snapshot": {
+      "preferred_content_types": [
+        "exercise",
+        "audio",
+        "text",
+        "interactive_guide"
+      ],
+      "preferred_activities": [
+        "breathing exercise",
+        "meditation",
+        "journaling",
+        "relaxation activity",
+        "motivational content"
+      ],
+      "preferred_language": "Hindi",
+      "interaction_count": 218
+    },
+    "emotion_at_recommendation": "Joy",
+    "emotion_intensity": 0.928,
+    "interaction_metadata": {
+      "title": "Inspirational Resilience Audio Bites",
+      "tags": [
+        "audio_quotes",
+        "resilience",
+        "perspective",
+        "encouragement"
+      ],
+      "final_score": 0.672
+    }
   }
 ]
